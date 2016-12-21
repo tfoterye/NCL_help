@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="description" content="NCL built-in functions (graphics routines)">
+<meta name="keywords" content="tdez2d">
+<title>tdez2d</title>
+</head>
+
+<body>
+	
+	<!-- main navigation include -->
+		<!-- NCL CSS -->
+	<link rel="stylesheet" href="ncl.css" tppabs="http://www.ncl.ucar.edu/styles/ncl.css" type="text/css" media="all">
+	
+	
+		<!-- Equal Height Columns -->
+		<script type="text/javascript" src="column_height_equal.js" tppabs="http://www.ncl.ucar.edu/scripts/column_height_equal.js"></script>
+		
+		<!-- DOJO Expandable Tree Nav -->
+
+		<script type="text/javascript" src="dojo.js" tppabs="http://www.ncl.ucar.edu/scripts/dojo/dojo.js"></script>
+		<script type="text/javascript">
+		
+		dojo.require("dojo.widget.TreeV3");
+		dojo.require("dojo.widget.TreeNodeV3");
+		dojo.require("dojo.widget.TreeLinkExtension");
+		dojo.require("dojo.widget.TreeBasicControllerV3");
+		dojo.hostenv.writeIncludes();
+
+		</script>
+		
+
+		<div id="top_colorbar"><!-- begin top_colorbar -->
+		</div><!-- end top_colorbar -->
+
+
+	<div id="nav_org_wrap"><!-- begin nav_org_wrap -->
+	<div id="nav_org"><!-- begin nav_org -->
+
+		<ul class="menubar">
+
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.ncl.ucar.edu/internal/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/internal/'" tppabs="http://www.ncl.ucar.edu/internal/">&nbsp;</a>
+			</li>
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.ncar.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncar.ucar.edu/'" tppabs="http://www.ncar.ucar.edu/">NCAR</a>
+			</li>
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.cisl.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.cisl.ucar.edu/'" tppabs="http://www.cisl.ucar.edu/">CISL</a>
+			</li>
+			
+			<li><a class="trigger" href="javascript:if(confirm('http://www.vets.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.vets.ucar.edu/'" tppabs="http://www.vets.ucar.edu/">VETS</a>
+			</li>
+		</ul>
+
+	</div><!-- end nav_org -->
+
+	<div id="search"><!-- begin search -->
+
+		<ul class="menubar">
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.ncl.ucar.edu/Download/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Download/'" tppabs="http://www.ncl.ucar.edu/Download/">Download</a>
+			</li>
+
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.ncl.ucar.edu/contributors.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/contributors.shtml'" tppabs="http://www.ncl.ucar.edu/contributors.shtml">Contributors</a>
+			</li>
+
+		</ul>
+
+	</div><!-- end search -->
+
+	</div><!-- end nav_org_wrap -->
+	
+	
+	
+
+		<div id="nav_main_wrap"><!-- begin nav_main_wrap -->
+
+		<div id="nav_main"><!-- begin nav_main -->
+			<ul id="menubar_main">
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/'" tppabs="http://www.ncl.ucar.edu/" class="triggeron">NCL</a>
+					<ul>
+					  <li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/overview.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/overview.shtml'" tppabs="http://www.ncl.ucar.edu/overview.shtml" class="subitem">Overview</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/get_started.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/get_started.shtml'" tppabs="http://www.ncl.ucar.edu/get_started.shtml" class="subitem">Getting Started</a> </li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/gallery.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/gallery.shtml'" tppabs="http://www.ncl.ucar.edu/gallery.shtml" class="subitem">Gallery</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Download/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Download/'" tppabs="http://www.ncl.ucar.edu/Download/" class="subitem">Download</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/current_release.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/current_release.shtml'" tppabs="http://www.ncl.ucar.edu/current_release.shtml" class="subitem">What's New</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/'" tppabs="http://www.ncl.ucar.edu/Document/" class="subitem">Documentation</a></li>						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/citation.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/citation.shtml'" tppabs="http://www.ncl.ucar.edu/citation.shtml" class="subitem">Citing NCL</a></li>
+					</ul>
+
+				</li>
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/'" tppabs="http://www.ncl.ucar.edu/Applications/" class="trigger">Examples</a>
+					<ul>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/'" tppabs="http://www.ncl.ucar.edu/Applications/" class="subitem" title="Examples">All Examples</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/Templates/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/Templates/'" tppabs="http://www.ncl.ucar.edu/Applications/Templates/" class="subitem">Templates</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_io.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_io.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_io.shtml" class="subitem">File I/O</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_data.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_data.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_data.shtml" class="subitem">Datasets</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_maps.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_maps.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_maps.shtml" class="subitem">Maps</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_models.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_models.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_models.shtml" class="subitem">Models</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_dataP.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_dataP.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_dataP.shtml" class="subitem">Data Analysis</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_ptypes.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_ptypes.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_ptypes.shtml" class="subitem">Plot Types</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_tech.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_tech.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_tech.shtml" class="subitem">Plot Techniques</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_special.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_special.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_special.shtml" class="subitem">Special Plots</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_grids.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_grids.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_grids.shtml" class="subitem">Non-uniform Grids</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_misc.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_misc.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_misc.shtml" class="subitem">Miscellaneous</a></li>
+					</ul>
+				</li>
+
+				<li>
+				<a href="list_alpha.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml" class="trigger">Functions</a>
+					<ul>
+						<li><a href="list_alpha.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml" class="subitem">Alphabetical Listing</a></li>
+						<li><a href="index.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/" class="subitem">Category Listing</a></li>
+						<li><a href="list_type.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/list_type.shtml" class="subitem">Function-Type Listing</a></li>						
+					</ul>
+				</li>
+				
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/" class="trigger">Resources</a>
+					<ul>
+					  <li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml" class="subitem">Complete Listing</a></li>
+					
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/am.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/am.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/am.shtml" class="subitem">am (annotation manager)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/app.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/app.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/app.shtml" class="subitem">app (app)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/ca.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/ca.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/ca.shtml" class="subitem">ca (coordinate array)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/cn.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/cn.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/cn.shtml" class="subitem">cn (contour)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/ct.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/ct.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/ct.shtml" class="subitem">ct (coordinate array table)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/dc.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/dc.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/dc.shtml" class="subitem">dc (data comm)</a></li>
+						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/err.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/err.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/err.shtml" class="subitem">err (error)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/gs.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/gs.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/gs.shtml" class="subitem">gs (graphics styles)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/gsn.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/gsn.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/gsn.shtml" class="subitem">gsn (gsn high-level interfaces)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/lb.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/lb.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/lb.shtml" class="subitem">lb (label bar)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/lg.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/lg.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/lg.shtml" class="subitem">lg (legends)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/mp.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/mp.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/mp.shtml" class="subitem">mp (maps)</a></li>
+						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/pm.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/pm.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/pm.shtml" class="subitem">pm (plot manager)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/pr.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/pr.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/pr.shtml" class="subitem">pr (primitives)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/sf.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/sf.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/sf.shtml" class="subitem">sf (scalar field)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/st.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/st.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/st.shtml" class="subitem">st (streamline)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/tf.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/tf.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/tf.shtml" class="subitem">tf (transform)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/ti.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/ti.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/ti.shtml" class="subitem">ti (title)</a></li>
+						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/tm.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/tm.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/tm.shtml" class="subitem">tm (tickmark)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/tr.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/tr.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/tr.shtml" class="subitem">tr (transformation)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/tx.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/tx.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/tx.shtml" class="subitem">tx (text)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/vc.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/vc.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/vc.shtml" class="subitem">vc (vectors)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/vf.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/vf.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/vf.shtml" class="subitem">vf (vector field)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/vp.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/vp.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/vp.shtml" class="subitem">vp (view port)</a></li>
+						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/wk.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/wk.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/wk.shtml" class="subitem">wk (workstation)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/ws.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/ws.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/ws.shtml" class="subitem">ws (workspace)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/xy.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/xy.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/xy.shtml" class="subitem">xy (xy plots)</a></li>						
+					</ul>
+        </li>
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/links.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/links.shtml'" tppabs="http://www.ncl.ucar.edu/links.shtml" class="trigger">Popular Links</a>
+					<ul>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/hlures.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/hlures.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/hlures.shtml" class="subitem">.hluresfile</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml" class="subitem">Color Tables</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/font_tables.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/font_tables.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/font_tables.shtml" class="subitem">Font Tables</a></li>	
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Language/error_messages.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Language/error_messages.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Language/error_messages.shtml" class="subitem">Error Messages</a></li>	
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Images/dashpatterns.png  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Images/dashpatterns.png'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Images/dashpatterns.png" class="subitem">Dash Pattern Table</a></li>	
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Images/fillpatterns.png  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Images/fillpatterns.png'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Images/fillpatterns.png" class="subitem">Fill Pattern Table</a></li>	
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Images/markers.png  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Images/markers.png'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Images/markers.png" class="subitem">Marker Table</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/map_projections.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/map_projections.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/map_projections.shtml" class="subitem">Map Projections</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/rangs.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/rangs.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/rangs.shtml" class="subitem">High Resolution Map Database</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/editor.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/editor.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/editor.shtml" class="subitem">Editor Enhancements</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Tools/ncl_convert2nc.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Tools/ncl_convert2nc.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Tools/ncl_convert2nc.shtml">ncl_convert2nc</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Tools/ncl_filedump.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Tools/ncl_filedump.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Tools/ncl_filedump.shtml">ncl_filedump</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Tools/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Tools/'" tppabs="http://www.ncl.ucar.edu/Document/Tools/" class="subitem">Tools</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Tools/WRAPIT.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Tools/WRAPIT.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Tools/WRAPIT.shtml" class="subitem">WRAPIT</a></li>
+					</ul>
+				</li>
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/announcements.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/announcements.shtml'" tppabs="http://www.ncl.ucar.edu/announcements.shtml" class="trigger">What's New</a>
+					<ul>
+					        <li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/announcements.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/announcements.shtml'" tppabs="http://www.ncl.ucar.edu/announcements.shtml" class="subitem">Announcements</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/current_release.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/current_release.shtml'" tppabs="http://www.ncl.ucar.edu/current_release.shtml" class="subitem">In Latest Release</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/new_applications.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/new_applications.shtml'" tppabs="http://www.ncl.ucar.edu/new_applications.shtml" class="subitem">In Application Examples</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/future_release.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/future_release.shtml'" tppabs="http://www.ncl.ucar.edu/future_release.shtml" class="subitem">In Next Release</a></li>	
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/prev_releases.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/prev_releases.shtml'" tppabs="http://www.ncl.ucar.edu/prev_releases.shtml" class="subitem">In Previous Releases</a></li>
+					</ul>
+				</li>
+	
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Support/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Support/'" tppabs="http://www.ncl.ucar.edu/Support/" class='trigger'>Support</a>
+					<ul>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Support/email_lists.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Support/email_lists.shtml'" tppabs="http://www.ncl.ucar.edu/Support/email_lists.shtml" class="subitem">Email Lists</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/editor.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/editor.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/editor.shtml" class="subitem">Editor enhancements</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Language/error_messages.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Language/error_messages.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Language/error_messages.shtml" class="subitem">Error messages</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Manuals/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Manuals/'" tppabs="http://www.ncl.ucar.edu/Document/Manuals/" class="subitem">Manuals</a></li>
+						<li><a href="javascript:if(confirm('https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl'" tppabs="https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl">NCL on yellowstone</a>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Training/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Training/'" tppabs="http://www.ncl.ucar.edu/Training/" class="subitem">Training</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Training/Webinars/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Training/Webinars/'" tppabs="http://www.ncl.ucar.edu/Training/Webinars/" class="subitem">Webinars</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Training/Workshops/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Training/Workshops/'" tppabs="http://www.ncl.ucar.edu/Training/Workshops/" class="subitem">Workshops</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/'" tppabs="http://www.ncl.ucar.edu/Document/" class="subitem">Documentation</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/FAQ/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/FAQ/'" tppabs="http://www.ncl.ucar.edu/FAQ/" class="subitem">FAQ</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/known_bugs.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/known_bugs.shtml'" tppabs="http://www.ncl.ucar.edu/known_bugs.shtml" class="subitem">Known Bugs</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/report_bug.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/report_bug.shtml'" tppabs="http://www.ncl.ucar.edu/report_bug.shtml" class="subitem">Report Bugs</a></li>
+					</ul>
+				</li>
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/External/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/External/'" tppabs="http://www.ncl.ucar.edu/External/" class='trigger'>External</a>
+					<ul>
+						<li><a href="javascript:if(confirm('https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl'" tppabs="https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl" class="subitem">Using NCL on Yellowstone</a></li>
+						<li><a href="javascript:if(confirm('http://climatedataguide.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://climatedataguide.ucar.edu/'" tppabs="http://climatedataguide.ucar.edu/" class="subitem">Climate Data Guide</a></li>
+						<li><a href="javascript:if(confirm('https://code.zmaw.de/projects/cdo/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='https://code.zmaw.de/projects/cdo/'" tppabs="https://code.zmaw.de/projects/cdo/" class="subitem">Climate Data Operators</a></li>
+						<li><a href="javascript:if(confirm('http://www.earthsystemmodeling.org/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.earthsystemmodeling.org/'" tppabs="http://www.earthsystemmodeling.org/" class="subitem">Earth System Modeling Framework</a></li>
+						<li><a href="javascript:if(confirm('http://nco.sourceforge.net/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://nco.sourceforge.net/'" tppabs="http://nco.sourceforge.net/" class="subitem">NetCDF Operators</a></li>
+						<li><a href="javascript:if(confirm('http://trac.mcs.anl.gov/projects/parvis/wiki  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://trac.mcs.anl.gov/projects/parvis/wiki'" tppabs="http://trac.mcs.anl.gov/projects/parvis/wiki" class="subitem">ParVis</a></li>
+						<li><a href="javascript:if(confirm('http://www.pyngl.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.pyngl.ucar.edu/'" tppabs="http://www.pyngl.ucar.edu/" class="subitem">PyNGL</a></li>
+						<li><a href="javascript:if(confirm('http://www.pyngl.ucar.edu/Nio.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.pyngl.ucar.edu/Nio.shtml'" tppabs="http://www.pyngl.ucar.edu/Nio.shtml" class="subitem">PyNIO</a></li>
+					</ul>
+				</li>
+
+			<!-- end menubar_main -->		
+			</ul>
+		
+		<!-- end nav_main -->	
+		</div>
+		
+	<!-- end nav_main_wrap -->	
+  	</div>
+		
+			
+
+	
+	<div id="wrap"><!-- begin wrap -->
+	<div id="content"><!-- begin content -->
+	
+	<!-- ######### BEGIN EDITABLE PAGE CONTENT ######### -->
+
+			<div id="subheader"><!-- begin subheader -->
+			<map name="ncl-home">
+<area shape="rect" coords="0,0,65,40" href="javascript:if(confirm('http://www.ncl.ucar.edu/index.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/index.shtml'" tppabs="http://www.ncl.ucar.edu/index.shtml">
+<area shape="rect" coords="580,0,640,40" href="javascript:if(confirm('http://www.ncar.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncar.ucar.edu/'" tppabs="http://www.ncar.ucar.edu/">
+</map>
+
+	<div id="nclheader">
+	<img src="ncl-b4.jpg" tppabs="http://www.ncl.ucar.edu/Images/ncl-b4.jpg" alt="NCL Website header" usemap="#ncl-home">
+	</div>
+
+
+			<div id="googlesearch">
+<form name="google" action="http://www.ucar.edu/search/googleresults.jsp" id="cse-search-box">
+ <div id="googlesearch">
+   <input type="hidden" name="cx" value="008424664622949020059:afj38jxaljc" />
+   <input type="hidden" name="cof" value="FORID:9" />
+   <input type="hidden" name="ie" value="UTF-8" />
+   <input type="text" name="q" size="12" />
+   <input type=hidden name=hq value="site:www.ncl.ucar.edu">
+   <a href="javascript:if(confirm('http://www2.ucar.edu/advanced-search  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www2.ucar.edu/advanced-search'" tppabs="http://www2.ucar.edu/advanced-search">advanced</a>
+ </div>
+</form> 
+<script type="text/javascript" src="brand-form=cse-search-box&lang=en" tppabs="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>
+				<p class="datetime">  </p>
+
+			</div><!-- end googlesearch -->
+
+			</div><!-- end subheader -->
+			
+			      <div id="general_main">
+<a class=crumb href="javascript:if(confirm('http://www.ncl.ucar.edu/index.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/index.shtml'" tppabs="http://www.ncl.ucar.edu/index.shtml">NCL Home ></a>
+<a class=crumb href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/index.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/index.shtml'" tppabs="http://www.ncl.ucar.edu/Document/index.shtml">Documentation ></a>
+<a class=crumb href="index.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/index.shtml">Functions ></a>
+<a class=crumb href="graphics_routines.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/graphics_routines.shtml">Graphics routines</a>
+<br>
+<h1>tdez2d</h1>
+
+<p>
+Draws a surface on the specified workstation.
+</p>
+
+<a name="Prototype"></a>
+<h2>Prototype</h2>
+<pre>
+	procedure tdez2d (
+		wks   [1] : graphic,  
+		x     [*] : float,    
+		y     [*] : float,    
+		z  [*][*] : float,    
+		rmult [1] : float,    
+		theta [1] : float,    
+		phi   [1] : float,    
+		ist   [1] : integer   
+	)
+</pre>
+<a name="Arguments"></a>
+<h2>Arguments</h2>
+<em>wks</em>
+<p class=indent>An NCL workstation identifier for where you want to draw the surface.
+The <em>wks</em> identifier is one returned either from calling
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Interfaces/gsn_open_wks.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Interfaces/gsn_open_wks.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Interfaces/gsn_open_wks.shtml"><strong>gsn_open_wks</strong></a> or calling <a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Manuals/Ref_Manual/NclStatements.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Manuals/Ref_Manual/NclStatements.shtml#Create'" tppabs="http://www.ncl.ucar.edu/Document/Manuals/Ref_Manual/NclStatements.shtml#Create">create</a> to
+create a Workstation object.</p>
+<p class=indent>
+</p>
+<em>x</em>
+<p class=indent>A one-dimensional array specifying X-coordinate values; must be
+monotonically increasing.
+</p>
+<em>y</em>
+<p class=indent>A one-dimensional array specifying Y-coordinate values; must be
+monotonically increasing.
+</p>
+<em>z</em>
+<p class=indent>A two-dimensional array specifying functional values at the X and Y
+coordinate values in the first two arguments.  The values of
+<em>z</em> are stored with the first dimension varying the fastest,
+i.e. <em>z</em>(i,j) is the data value at
+(<em>x</em>(i),<em>y</em>(j)) for i=0,
+<a href="dimsizes.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dimsizes.shtml"><strong>dimsizes</strong></a>(<em>x</em>)-1 and
+j=0,<a href="dimsizes.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dimsizes.shtml"><strong>dimsizes</strong></a>(<em>y</em>)-1.
+</p>
+<em>rmult</em>
+<br>
+<em>theta</em>
+<br>
+<em>phi</em>
+<p class=indent>Values specifying an eye position (the point from which the surface
+will be viewed); these values are defined as follows: </p>
+<p class=indent>
+
+<UL>
+
+<LI><em>rmult</em> is a multiplier of the diagonal length (DL) of the
+smallest box containing the surface to be drawn.
+
+<LI><em>theta</em> is an angle (in degrees) in the XY plane 
+measured positive counter-clockwise from the X axis.
+
+<LI><em>phi</em> is an angle (in degrees) measured from the 
+positive Z axis toward the XY plane.
+
+</UL>
+</p>
+<p class=indent>
+
+Thus, the coordinate (<em>rmult</em>*DL,<em>theta,phi</em>) is the
+spherical coordinate for the eye position.  If <em>rmult</em> =
+<em>theta</em> = <em>phi</em> = 0., a default eye position
+(2.5,-55.,70.) is chosen. </p>
+<p class=indent>
+
+The point looked <i>at</i> is calculated to be the midpoint of
+the surface.</p>
+<p class=indent>
+</p>
+<em>ist</em>
+<p class=indent>A style index defining the colors used to shade the
+surface.  The legal values for <em>ist</em> are as follows:
+</p>
+<p class=indent>
+
+<TABLE BORDER CELLPADDING=5><TH><em>ist</em><TH>Description<TR>
+<TD VALIGN=TOP>1 <TD>produce a wire-frame surface<TR>
+<TD VALIGN=TOP>2 <TD>use gray shades underneath; gray shades on top<TR>
+<TD VALIGN=TOP>3 <TD>use gray shades underneath; red shades on top<TR>
+<TD VALIGN=TOP>4 <TD>use gray shades underneath; green shades on top<TR>
+<TD VALIGN=TOP>5 <TD>use gray shades underneath; blue shades on top<TR>
+<TD VALIGN=TOP>6 <TD>use gray shades underneath; cyan shades on top<TR>
+<TD VALIGN=TOP>7 <TD>use gray shades underneath; gray shades on top<TR>
+<TD VALIGN=TOP>8 <TD>use gray shades underneath; magenta shades on top
+</TABLE>
+</p>
+<p class=indent>
+
+If <em>ist</em> is positive, then black is used for the background
+color and white for the foreground color; if <em>ist</em> is the
+negative of any of the above values, then white is used for the
+background color and black for the foreground color.  If <em>ist</em>
+falls outside of the legal range, it defaults to 6.
+</p>
+<a name="Description"></a>
+<h2>Description</h2>
+<p>
+This function draws a surface on the specified workstation, using the
+low-level package, <a href="javascript:if(confirm('http://www.ncarg.ucar.edu//supplements/tdpack/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncarg.ucar.edu//supplements/tdpack/'" tppabs="http://www.ncarg.ucar.edu//supplements/tdpack/">Tdpack</a>.
+
+When <strong>tdez2d</strong> is called, a color table is defined for
+the workstation specified by <em>wks</em>.  <i>This color table will
+supersede any color table that has been previously defined.</i> The
+color table that is defined is:
+ 
+<P>
+<TABLE BORDER CELLPADDING=5><TH>Color index<TH>Colors<TR>
+<TD VALIGN=TOP>0<TD>black if <em>IST</em> is positive; white if <em>IST</em> is negative<TR>
+<TD VALIGN=TOP>1<TD>white if <em>IST</em> is positive; black if <em>IST</em> is negative<TR>
+<TD VALIGN=TOP>2<TD>red<TR>
+<TD VALIGN=TOP>3<TD>green<TR>
+<TD VALIGN=TOP>4<TD>blue<TR>
+<TD VALIGN=TOP>5<TD>cyan<TR>
+<TD VALIGN=TOP>6<TD>magenta<TR>
+<TD VALIGN=TOP>7<TD>yellow<TR>
+<TD VALIGN=TOP>8-37<TD>grayscale from white to black<TR>
+<TD VALIGN=TOP>38-67<TD>shades of gray<TR>
+<TD VALIGN=TOP>68-97<TD>shades of red<TR>
+<TD VALIGN=TOP>98-127<TD>shades of green<TR>
+<TD VALIGN=TOP>128-157<TD>shades of blue<TR>
+<TD VALIGN=TOP>158-187<TD>shades of cyan<TR>
+<TD VALIGN=TOP>188-217<TD>shades of magenta<TR>
+<TD VALIGN=TOP>218-247<TD>shades of yellow<TR>
+</TABLE>
+ 
+<P>
+<strong>tdez2d</strong> does not call <a href="frame.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/frame.shtml"><strong>frame</strong></a>.
+
+
+</p><a name="See_also"></a>
+<h2>See Also</h2>
+<p>
+Initialization routines:
+<a href="tdinit.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdinit.shtml"><strong>tdinit</strong></a>,
+<a href="tdpara.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdpara.shtml"><strong>tdpara</strong></a>,
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/tdclrs.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/tdclrs.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdclrs.shtml"><strong>tdclrs</strong></a>
+<p>
+
+Parameter access routines:
+<a href="tdgetp.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdgetp.shtml"><strong>tdgetp</strong></a>,
+<a href="tdgtrs.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdgtrs.shtml"><strong>tdgtrs</strong></a>,
+<a href="tdsetp.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdsetp.shtml"><strong>tdsetp</strong></a>,
+<a href="tdstrs.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdstrs.shtml"><strong>tdstrs</strong></a>
+<p>
+
+Point transforming routines:
+<a href="tdprpt.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdprpt.shtml"><strong>tdprpt</strong></a>,
+<a href="tdprpa.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdprpa.shtml"><strong>tdprpa</strong></a>,
+<a href="tdprpi.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdprpi.shtml"><strong>tdprpi</strong></a>
+<p>
+
+Line drawing routines:
+<a href="tdline.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdline.shtml"><strong>tdline</strong></a>,
+<a href="tdlndp.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdlndp.shtml"><strong>tdlndp</strong></a>,
+<a href="tdlnpa.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdlnpa.shtml"><strong>tdlnpa</strong></a>,
+<a href="tdlpdp.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdlpdp.shtml"><strong>tdlpdp</strong></a>,
+<a href="tdcurv.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdcurv.shtml"><strong>tdcurv</strong></a>,
+<a href="tdcudp.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdcudp.shtml"><strong>tdcudp</strong></a>
+<p>
+
+Grid drawing routines:
+<a href="tdgrds.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdgrds.shtml"><strong>tdgrds</strong></a>,
+<a href="tdgrid.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdgrid.shtml"><strong>tdgrid</strong></a>
+<p>
+
+Label drawing routines:
+<a href="tdlbls.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdlbls.shtml"><strong>tdlbls</strong></a>,
+<a href="tdlbla.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdlbla.shtml"><strong>tdlbla</strong></a>,
+<a href="tdlblp.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdlblp.shtml"><strong>tdlblp</strong></a>,
+<a href="tdplch.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdplch.shtml"><strong>tdplch</strong></a>
+<p>
+
+Surface drawing routines:
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/tddtri.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/tddtri.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tddtri.shtml"><strong>tddtri</strong></a>,
+<a href="tdstri.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdstri.shtml"><strong>tdstri</strong></a>,
+<a href="tditri.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tditri.shtml"><strong>tditri</strong></a>,
+<a href="tdmtri.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdmtri.shtml"><strong>tdmtri</strong></a>,
+<a href="tdttri.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdttri.shtml"><strong>tdttri</strong></a>,
+<a href="tdctri.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdctri.shtml"><strong>tdctri</strong></a>,
+<a href="tdotri.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdotri.shtml"><strong>tdotri</strong></a>,
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/tdsort.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/tdsort.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdsort.shtml"><strong>tdsort</strong></a>
+<p>
+
+Simplified interface routines:
+<a href="tdez3d.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/tdez3d.shtml"><strong>tdez3d</strong></a>
+</p><a name="Examples"></a>
+<h2>Examples</h2>
+<p>
+The following code produces a sample surface plot:
+
+<pre>
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
+
+begin
+
+;
+;  Create the input arrays.
+;
+  nxi = 11
+  nyi = 17
+
+  xi = <a href="fspan.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fspan.shtml"><strong>fspan</strong></a>(0.,1.,nxi)
+  yi = <a href="fspan.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fspan.shtml"><strong>fspan</strong></a>(0.,1.,nyi)
+  zi = <a href="new.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/new.shtml"><strong>new</strong></a>((/nxi,nyi/),float)
+  zi = 0.5 + 0.25 * (<a href="sin.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/sin.shtml"><strong>sin</strong></a>(-7.*<a href="conform.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/conform.shtml"><strong>conform</strong></a>(zi,xi,0)) + <a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/cos.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/cos.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/cos.shtml"><strong>cos</strong></a>(5.*<a href="conform.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/conform.shtml"><strong>conform</strong></a>(zi,yi,1)))
+
+;
+;  Set up the output grid.
+;
+  nxo = 31
+  nyo = 21
+  xo = <a href="fspan.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fspan.shtml"><strong>fspan</strong></a>(0.,1.,nxo)
+  yo = <a href="fspan.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fspan.shtml"><strong>fspan</strong></a>(0.,1.,nyo)
+
+;
+;  Interpolate.
+;
+  zo = <a href="ftsurf.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/ftsurf.shtml"><strong>ftsurf</strong></a>(xi,yi,zi,xo,yo)
+
+  wks = <a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Interfaces/gsn_open_wks.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Interfaces/gsn_open_wks.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Interfaces/gsn_open_wks.shtml"><strong>gsn_open_wks</strong></a>("x11","test")
+;
+;  Draw plot.
+;
+  rho   = 3.
+  theta = 36.
+  phi   = 67.
+
+  <strong>tdez2d</strong>(wks, xo, yo, zo, rho, theta, phi, -6)
+  <a href="frame.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/frame.shtml"><strong>frame</strong></a>(wks)
+end
+</PRE>
+</p>					</div>
+
+					<p>&nbsp;</p>
+
+		<!-- begin footer -->
+		<div id="footer">
+		
+		<p>&#169;2016 <a href="javascript:if(confirm('http://www.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ucar.edu/'" tppabs="http://www.ucar.edu/">UCAR</a> | <a href="javascript:if(confirm('http://www2.ucar.edu/privacy-policy  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www2.ucar.edu/privacy-policy'" tppabs="http://www2.ucar.edu/privacy-policy">Privacy Policy</a> | <a href="javascript:if(confirm('http://www2.ucar.edu/terms-of-use  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www2.ucar.edu/terms-of-use'" tppabs="http://www2.ucar.edu/terms-of-use">Terms of Use</a> 
+                   | <a href="mailto:ncladmin@ucar.edu">Contact the Webmaster</a> | <a href="javascript:if(confirm('http://www.nsf.gov/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.nsf.gov/'" tppabs="http://www.nsf.gov/">Sponsored by NSF</a></p>
+
+
+		<!-- end footer -->
+		</div>
+
+           <br class="clearboth"/>
+
+	   <!-- end content -->
+	</div>
+<!-- end wrap -->
+</div>
+</body>
+</html>

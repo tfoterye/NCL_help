@@ -1,0 +1,1289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>NCL Function Documentation: Statistics</title>
+</head>
+<body>
+	<!-- main navigation include -->
+		<!-- NCL CSS -->
+	<link rel="stylesheet" href="ncl.css" tppabs="http://www.ncl.ucar.edu/styles/ncl.css" type="text/css" media="all">
+	
+	
+		<!-- Equal Height Columns -->
+		<script type="text/javascript" src="column_height_equal.js" tppabs="http://www.ncl.ucar.edu/scripts/column_height_equal.js"></script>
+		
+		<!-- DOJO Expandable Tree Nav -->
+
+		<script type="text/javascript" src="dojo.js" tppabs="http://www.ncl.ucar.edu/scripts/dojo/dojo.js"></script>
+		<script type="text/javascript">
+		
+		dojo.require("dojo.widget.TreeV3");
+		dojo.require("dojo.widget.TreeNodeV3");
+		dojo.require("dojo.widget.TreeLinkExtension");
+		dojo.require("dojo.widget.TreeBasicControllerV3");
+		dojo.hostenv.writeIncludes();
+
+		</script>
+		
+
+		<div id="top_colorbar"><!-- begin top_colorbar -->
+		</div><!-- end top_colorbar -->
+
+
+	<div id="nav_org_wrap"><!-- begin nav_org_wrap -->
+	<div id="nav_org"><!-- begin nav_org -->
+
+		<ul class="menubar">
+
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.ncl.ucar.edu/internal/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/internal/'" tppabs="http://www.ncl.ucar.edu/internal/">&nbsp;</a>
+			</li>
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.ncar.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncar.ucar.edu/'" tppabs="http://www.ncar.ucar.edu/">NCAR</a>
+			</li>
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.cisl.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.cisl.ucar.edu/'" tppabs="http://www.cisl.ucar.edu/">CISL</a>
+			</li>
+			
+			<li><a class="trigger" href="javascript:if(confirm('http://www.vets.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.vets.ucar.edu/'" tppabs="http://www.vets.ucar.edu/">VETS</a>
+			</li>
+		</ul>
+
+	</div><!-- end nav_org -->
+
+	<div id="search"><!-- begin search -->
+
+		<ul class="menubar">
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.ncl.ucar.edu/Download/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Download/'" tppabs="http://www.ncl.ucar.edu/Download/">Download</a>
+			</li>
+
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.ncl.ucar.edu/contributors.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/contributors.shtml'" tppabs="http://www.ncl.ucar.edu/contributors.shtml">Contributors</a>
+			</li>
+
+		</ul>
+
+	</div><!-- end search -->
+
+	</div><!-- end nav_org_wrap -->
+	
+	
+	
+
+		<div id="nav_main_wrap"><!-- begin nav_main_wrap -->
+
+		<div id="nav_main"><!-- begin nav_main -->
+			<ul id="menubar_main">
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/'" tppabs="http://www.ncl.ucar.edu/" class="triggeron">NCL</a>
+					<ul>
+					  <li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/overview.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/overview.shtml'" tppabs="http://www.ncl.ucar.edu/overview.shtml" class="subitem">Overview</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/get_started.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/get_started.shtml'" tppabs="http://www.ncl.ucar.edu/get_started.shtml" class="subitem">Getting Started</a> </li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/gallery.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/gallery.shtml'" tppabs="http://www.ncl.ucar.edu/gallery.shtml" class="subitem">Gallery</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Download/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Download/'" tppabs="http://www.ncl.ucar.edu/Download/" class="subitem">Download</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/current_release.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/current_release.shtml'" tppabs="http://www.ncl.ucar.edu/current_release.shtml" class="subitem">What's New</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/'" tppabs="http://www.ncl.ucar.edu/Document/" class="subitem">Documentation</a></li>						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/citation.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/citation.shtml'" tppabs="http://www.ncl.ucar.edu/citation.shtml" class="subitem">Citing NCL</a></li>
+					</ul>
+
+				</li>
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/'" tppabs="http://www.ncl.ucar.edu/Applications/" class="trigger">Examples</a>
+					<ul>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/'" tppabs="http://www.ncl.ucar.edu/Applications/" class="subitem" title="Examples">All Examples</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/Templates/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/Templates/'" tppabs="http://www.ncl.ucar.edu/Applications/Templates/" class="subitem">Templates</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_io.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_io.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_io.shtml" class="subitem">File I/O</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_data.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_data.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_data.shtml" class="subitem">Datasets</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_maps.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_maps.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_maps.shtml" class="subitem">Maps</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_models.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_models.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_models.shtml" class="subitem">Models</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_dataP.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_dataP.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_dataP.shtml" class="subitem">Data Analysis</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_ptypes.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_ptypes.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_ptypes.shtml" class="subitem">Plot Types</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_tech.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_tech.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_tech.shtml" class="subitem">Plot Techniques</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_special.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_special.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_special.shtml" class="subitem">Special Plots</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_grids.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_grids.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_grids.shtml" class="subitem">Non-uniform Grids</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_misc.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_misc.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_misc.shtml" class="subitem">Miscellaneous</a></li>
+					</ul>
+				</li>
+
+				<li>
+				<a href="list_alpha.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml" class="trigger">Functions</a>
+					<ul>
+						<li><a href="list_alpha.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml" class="subitem">Alphabetical Listing</a></li>
+						<li><a href="index.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/" class="subitem">Category Listing</a></li>
+						<li><a href="list_type.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/list_type.shtml" class="subitem">Function-Type Listing</a></li>						
+					</ul>
+				</li>
+				
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/" class="trigger">Resources</a>
+					<ul>
+					  <li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml" class="subitem">Complete Listing</a></li>
+					
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/am.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/am.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/am.shtml" class="subitem">am (annotation manager)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/app.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/app.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/app.shtml" class="subitem">app (app)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/ca.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/ca.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/ca.shtml" class="subitem">ca (coordinate array)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/cn.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/cn.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/cn.shtml" class="subitem">cn (contour)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/ct.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/ct.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/ct.shtml" class="subitem">ct (coordinate array table)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/dc.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/dc.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/dc.shtml" class="subitem">dc (data comm)</a></li>
+						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/err.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/err.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/err.shtml" class="subitem">err (error)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/gs.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/gs.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/gs.shtml" class="subitem">gs (graphics styles)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/gsn.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/gsn.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/gsn.shtml" class="subitem">gsn (gsn high-level interfaces)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/lb.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/lb.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/lb.shtml" class="subitem">lb (label bar)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/lg.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/lg.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/lg.shtml" class="subitem">lg (legends)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/mp.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/mp.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/mp.shtml" class="subitem">mp (maps)</a></li>
+						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/pm.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/pm.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/pm.shtml" class="subitem">pm (plot manager)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/pr.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/pr.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/pr.shtml" class="subitem">pr (primitives)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/sf.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/sf.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/sf.shtml" class="subitem">sf (scalar field)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/st.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/st.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/st.shtml" class="subitem">st (streamline)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/tf.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/tf.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/tf.shtml" class="subitem">tf (transform)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/ti.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/ti.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/ti.shtml" class="subitem">ti (title)</a></li>
+						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/tm.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/tm.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/tm.shtml" class="subitem">tm (tickmark)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/tr.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/tr.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/tr.shtml" class="subitem">tr (transformation)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/tx.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/tx.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/tx.shtml" class="subitem">tx (text)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/vc.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/vc.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/vc.shtml" class="subitem">vc (vectors)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/vf.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/vf.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/vf.shtml" class="subitem">vf (vector field)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/vp.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/vp.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/vp.shtml" class="subitem">vp (view port)</a></li>
+						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/wk.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/wk.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/wk.shtml" class="subitem">wk (workstation)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/ws.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/ws.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/ws.shtml" class="subitem">ws (workspace)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/xy.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/xy.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/xy.shtml" class="subitem">xy (xy plots)</a></li>						
+					</ul>
+        </li>
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/links.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/links.shtml'" tppabs="http://www.ncl.ucar.edu/links.shtml" class="trigger">Popular Links</a>
+					<ul>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/hlures.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/hlures.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/hlures.shtml" class="subitem">.hluresfile</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml" class="subitem">Color Tables</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/font_tables.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/font_tables.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/font_tables.shtml" class="subitem">Font Tables</a></li>	
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Language/error_messages.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Language/error_messages.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Language/error_messages.shtml" class="subitem">Error Messages</a></li>	
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Images/dashpatterns.png  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Images/dashpatterns.png'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Images/dashpatterns.png" class="subitem">Dash Pattern Table</a></li>	
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Images/fillpatterns.png  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Images/fillpatterns.png'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Images/fillpatterns.png" class="subitem">Fill Pattern Table</a></li>	
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Images/markers.png  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Images/markers.png'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Images/markers.png" class="subitem">Marker Table</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/map_projections.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/map_projections.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/map_projections.shtml" class="subitem">Map Projections</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/rangs.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/rangs.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/rangs.shtml" class="subitem">High Resolution Map Database</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/editor.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/editor.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/editor.shtml" class="subitem">Editor Enhancements</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Tools/ncl_convert2nc.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Tools/ncl_convert2nc.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Tools/ncl_convert2nc.shtml">ncl_convert2nc</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Tools/ncl_filedump.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Tools/ncl_filedump.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Tools/ncl_filedump.shtml">ncl_filedump</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Tools/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Tools/'" tppabs="http://www.ncl.ucar.edu/Document/Tools/" class="subitem">Tools</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Tools/WRAPIT.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Tools/WRAPIT.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Tools/WRAPIT.shtml" class="subitem">WRAPIT</a></li>
+					</ul>
+				</li>
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/announcements.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/announcements.shtml'" tppabs="http://www.ncl.ucar.edu/announcements.shtml" class="trigger">What's New</a>
+					<ul>
+					        <li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/announcements.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/announcements.shtml'" tppabs="http://www.ncl.ucar.edu/announcements.shtml" class="subitem">Announcements</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/current_release.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/current_release.shtml'" tppabs="http://www.ncl.ucar.edu/current_release.shtml" class="subitem">In Latest Release</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/new_applications.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/new_applications.shtml'" tppabs="http://www.ncl.ucar.edu/new_applications.shtml" class="subitem">In Application Examples</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/future_release.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/future_release.shtml'" tppabs="http://www.ncl.ucar.edu/future_release.shtml" class="subitem">In Next Release</a></li>	
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/prev_releases.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/prev_releases.shtml'" tppabs="http://www.ncl.ucar.edu/prev_releases.shtml" class="subitem">In Previous Releases</a></li>
+					</ul>
+				</li>
+	
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Support/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Support/'" tppabs="http://www.ncl.ucar.edu/Support/" class='trigger'>Support</a>
+					<ul>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Support/email_lists.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Support/email_lists.shtml'" tppabs="http://www.ncl.ucar.edu/Support/email_lists.shtml" class="subitem">Email Lists</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/editor.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/editor.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/editor.shtml" class="subitem">Editor enhancements</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Language/error_messages.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Language/error_messages.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Language/error_messages.shtml" class="subitem">Error messages</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Manuals/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Manuals/'" tppabs="http://www.ncl.ucar.edu/Document/Manuals/" class="subitem">Manuals</a></li>
+						<li><a href="javascript:if(confirm('https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl'" tppabs="https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl">NCL on yellowstone</a>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Training/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Training/'" tppabs="http://www.ncl.ucar.edu/Training/" class="subitem">Training</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Training/Webinars/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Training/Webinars/'" tppabs="http://www.ncl.ucar.edu/Training/Webinars/" class="subitem">Webinars</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Training/Workshops/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Training/Workshops/'" tppabs="http://www.ncl.ucar.edu/Training/Workshops/" class="subitem">Workshops</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/'" tppabs="http://www.ncl.ucar.edu/Document/" class="subitem">Documentation</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/FAQ/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/FAQ/'" tppabs="http://www.ncl.ucar.edu/FAQ/" class="subitem">FAQ</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/known_bugs.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/known_bugs.shtml'" tppabs="http://www.ncl.ucar.edu/known_bugs.shtml" class="subitem">Known Bugs</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/report_bug.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/report_bug.shtml'" tppabs="http://www.ncl.ucar.edu/report_bug.shtml" class="subitem">Report Bugs</a></li>
+					</ul>
+				</li>
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/External/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/External/'" tppabs="http://www.ncl.ucar.edu/External/" class='trigger'>External</a>
+					<ul>
+						<li><a href="javascript:if(confirm('https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl'" tppabs="https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl" class="subitem">Using NCL on Yellowstone</a></li>
+						<li><a href="javascript:if(confirm('http://climatedataguide.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://climatedataguide.ucar.edu/'" tppabs="http://climatedataguide.ucar.edu/" class="subitem">Climate Data Guide</a></li>
+						<li><a href="javascript:if(confirm('https://code.zmaw.de/projects/cdo/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='https://code.zmaw.de/projects/cdo/'" tppabs="https://code.zmaw.de/projects/cdo/" class="subitem">Climate Data Operators</a></li>
+						<li><a href="javascript:if(confirm('http://www.earthsystemmodeling.org/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.earthsystemmodeling.org/'" tppabs="http://www.earthsystemmodeling.org/" class="subitem">Earth System Modeling Framework</a></li>
+						<li><a href="javascript:if(confirm('http://nco.sourceforge.net/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://nco.sourceforge.net/'" tppabs="http://nco.sourceforge.net/" class="subitem">NetCDF Operators</a></li>
+						<li><a href="javascript:if(confirm('http://trac.mcs.anl.gov/projects/parvis/wiki  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://trac.mcs.anl.gov/projects/parvis/wiki'" tppabs="http://trac.mcs.anl.gov/projects/parvis/wiki" class="subitem">ParVis</a></li>
+						<li><a href="javascript:if(confirm('http://www.pyngl.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.pyngl.ucar.edu/'" tppabs="http://www.pyngl.ucar.edu/" class="subitem">PyNGL</a></li>
+						<li><a href="javascript:if(confirm('http://www.pyngl.ucar.edu/Nio.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.pyngl.ucar.edu/Nio.shtml'" tppabs="http://www.pyngl.ucar.edu/Nio.shtml" class="subitem">PyNIO</a></li>
+					</ul>
+				</li>
+
+			<!-- end menubar_main -->		
+			</ul>
+		
+		<!-- end nav_main -->	
+		</div>
+		
+	<!-- end nav_main_wrap -->	
+  	</div>
+		
+			
+
+
+	<div id="wrap"><!-- begin wrap -->
+	<div id="content"><!-- begin content -->
+
+	<!-- ######### BEGIN EDITABLE PAGE CONTENT ######### -->
+
+			<div id="subheader"><!-- begin subheader -->
+			<map name="ncl-home">
+<area shape="rect" coords="0,0,65,40" href="javascript:if(confirm('http://www.ncl.ucar.edu/index.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/index.shtml'" tppabs="http://www.ncl.ucar.edu/index.shtml">
+<area shape="rect" coords="580,0,640,40" href="javascript:if(confirm('http://www.ncar.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncar.ucar.edu/'" tppabs="http://www.ncar.ucar.edu/">
+</map>
+
+	<div id="nclheader">
+	<img src="ncl-b4.jpg" tppabs="http://www.ncl.ucar.edu/Images/ncl-b4.jpg" alt="NCL Website header" usemap="#ncl-home">
+	</div>
+
+
+			<div id="googlesearch">
+<form name="google" action="http://www.ucar.edu/search/googleresults.jsp" id="cse-search-box">
+ <div id="googlesearch">
+   <input type="hidden" name="cx" value="008424664622949020059:afj38jxaljc" />
+   <input type="hidden" name="cof" value="FORID:9" />
+   <input type="hidden" name="ie" value="UTF-8" />
+   <input type="text" name="q" size="12" />
+   <input type=hidden name=hq value="site:www.ncl.ucar.edu">
+   <a href="javascript:if(confirm('http://www2.ucar.edu/advanced-search  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www2.ucar.edu/advanced-search'" tppabs="http://www2.ucar.edu/advanced-search">advanced</a>
+ </div>
+</form> 
+<script type="text/javascript" src="brand-form=cse-search-box&lang=en" tppabs="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>
+				<p class="datetime">  </p>
+
+			</div><!-- end googlesearch -->
+
+			</div><!-- end subheader -->
+
+			      <div id="general_main">
+
+<h1>Statistics</h1>
+
+<table cellspacing=4 cellpadding=10 width=100% border=1>
+
+<!--avg-->
+<tr>
+<td valign=top>
+<a href="avg.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/avg.shtml">
+avg</a></td>
+<td>
+Computes the average of a variable regardless of dimensionality.
+</td>
+</tr>
+<!--betainc-->
+<tr>
+<td valign=top>
+<a href="betainc.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/betainc.shtml">
+betainc</a></td>
+<td>
+Evaluates the incomplete beta function.
+</td>
+</tr>
+<!--bin_avg-->
+<tr>
+<td valign=top>
+<a href="bin_avg.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/bin_avg.shtml">
+bin_avg</a></td>
+<td>
+Calculates gridded binned averages and counts on a rectilinear grid using randomly spaced data.
+</td>
+</tr>
+<!--bin_sum-->
+<tr>
+<td valign=top>
+<a href="bin_sum.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/bin_sum.shtml">
+bin_sum</a></td>
+<td>
+Calculates binned sums and counts over multiple invocations of the procedure on a rectilinear grid.
+</td>
+</tr>
+<!--bootstrap_correl-->
+<tr>
+<td valign=top>
+<a href="bootstrap_correl.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Bootstrap/bootstrap_correl.shtml">
+bootstrap_correl</a></td>
+<td>
+Bootstrap estimates of sample cross correlations (<i>ie</i>, Pearson's correlation coefficient)  between two variables.
+</td>
+</tr>
+<!--bootstrap_diff-->
+<tr>
+<td valign=top>
+<a href="bootstrap_diff.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Bootstrap/bootstrap_diff.shtml">
+bootstrap_diff</a></td>
+<td>
+Bootstrap mean differences from two samples.
+</td>
+</tr>
+<!--bootstrap_estimate-->
+<tr>
+<td valign=top>
+<a href="bootstrap_estimate.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Bootstrap/bootstrap_estimate.shtml">
+bootstrap_estimate</a></td>
+<td>
+Extract the user specified element from the bootstrapped values.
+</td>
+</tr>
+<!--bootstrap_regcoef-->
+<tr>
+<td valign=top>
+<a href="bootstrap_regcoef.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Bootstrap/bootstrap_regcoef.shtml">
+bootstrap_regcoef</a></td>
+<td>
+Bootstrap estimates of linear regression coefficient.
+</td>
+</tr>
+<!--bootstrap_stat-->
+<tr>
+<td valign=top>
+<a href="bootstrap_stat.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Bootstrap/bootstrap_stat.shtml">
+bootstrap_stat</a></td>
+<td>
+Bootstrap estimates of a user specified statistic derived from a variable.
+</td>
+</tr>
+<!--cohsq_c2p-->
+<tr>
+<td valign=top>
+<a href="cohsq_c2p.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/cohsq_c2p.shtml">
+cohsq_c2p</a></td>
+<td>
+Given coherence-squared and the effective degrees-of-freedom, calculate the associated probability.
+</td>
+</tr>
+<!--cohsq_p2c-->
+<tr>
+<td valign=top>
+<a href="cohsq_p2c.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/cohsq_p2c.shtml">
+cohsq_p2c</a></td>
+<td>
+Calculate the value(s) of coherence-squared required for a specified significance level and effectiove degrees-of-freedom.
+</td>
+</tr>
+<!--dim_acumrun_n-->
+<tr>
+<td valign=top>
+<a href="dim_acumrun_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_acumrun_n.shtml">
+dim_acumrun_n</a></td>
+<td>
+Calculates individual accumulated sums of sequences ('runs') of a specified length.
+</td>
+</tr>
+<!--dim_avg-->
+<tr>
+<td valign=top>
+<a href="dim_avg.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_avg.shtml">
+dim_avg</a></td>
+<td>
+Computes the average of a variable's rightmost dimension at all other dimensions.
+</td>
+</tr>
+<!--dim_avg_n-->
+<tr>
+<td valign=top>
+<a href="dim_avg_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_avg_n.shtml">
+dim_avg_n</a></td>
+<td>
+Computes the average of a variable's given dimension(s) at all other dimensions.
+</td>
+</tr>
+<!--dim_avg_n_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_avg_n_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_avg_n_Wrap.shtml">
+dim_avg_n_Wrap</a></td>
+<td>
+Computes the average of a variable's given dimensions at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_avg_wgt-->
+<tr>
+<td valign=top>
+<a href="dim_avg_wgt.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_avg_wgt.shtml">
+dim_avg_wgt</a></td>
+<td>
+Computes the weighted average of a variable's rightmost dimension at all other dimensions.
+</td>
+</tr>
+<!--dim_avg_wgt_n-->
+<tr>
+<td valign=top>
+<a href="dim_avg_wgt_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_avg_wgt_n.shtml">
+dim_avg_wgt_n</a></td>
+<td>
+Computes the weighted average of a variable's given dimension at all other dimensions.
+</td>
+</tr>
+<!--dim_avg_wgt_n_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_avg_wgt_n_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_avg_wgt_n_Wrap.shtml">
+dim_avg_wgt_n_Wrap</a></td>
+<td>
+Computes the weighted average of a variable's given dimension at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_avg_wgt_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_avg_wgt_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_avg_wgt_Wrap.shtml">
+dim_avg_wgt_Wrap</a></td>
+<td>
+Computes the weighted average of a variable's rightmost dimension at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_avg_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_avg_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_avg_Wrap.shtml">
+dim_avg_Wrap</a></td>
+<td>
+Computes the average of a variable's rightmost dimension at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_cumsum-->
+<tr>
+<td valign=top>
+<a href="dim_cumsum.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_cumsum.shtml">
+dim_cumsum</a></td>
+<td>
+Calculates the cumulative sum along the rightmost dimension.
+</td>
+</tr>
+<!--dim_cumsum_n-->
+<tr>
+<td valign=top>
+<a href="dim_cumsum_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_cumsum_n.shtml">
+dim_cumsum_n</a></td>
+<td>
+Calculates the cumulative sum along the given dimension(s).
+</td>
+</tr>
+<!--dim_cumsum_n_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_cumsum_n_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_cumsum_n_Wrap.shtml">
+dim_cumsum_n_Wrap</a></td>
+<td>
+Calculates the cumulative sum along the given dimension(s) and retains metadata.
+</td>
+</tr>
+<!--dim_cumsum_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_cumsum_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_cumsum_Wrap.shtml">
+dim_cumsum_Wrap</a></td>
+<td>
+Calculates the cumulative sum along the rightmost dimension and retains metadata.
+</td>
+</tr>
+<!--dim_gamfit_n-->
+<tr>
+<td valign=top>
+<a href="dim_gamfit_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_gamfit_n.shtml">
+dim_gamfit_n</a></td>
+<td>
+Fit data to the two parameter gamma distribution.
+</td>
+</tr>
+<!--dim_max-->
+<tr>
+<td valign=top>
+<a href="dim_max.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_max.shtml">
+dim_max</a></td>
+<td>
+Finds the maximum of a variable's rightmost dimension at all other dimensions.
+</td>
+</tr>
+<!--dim_max_n-->
+<tr>
+<td valign=top>
+<a href="dim_max_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_max_n.shtml">
+dim_max_n</a></td>
+<td>
+Finds the maximum of a variable's given dimensions at all other dimensions.
+</td>
+</tr>
+<!--dim_max_n_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_max_n_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_max_n_Wrap.shtml">
+dim_max_n_Wrap</a></td>
+<td>
+Computes the maximum of a variable's given dimensions at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_median-->
+<tr>
+<td valign=top>
+<a href="dim_median.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_median.shtml">
+dim_median</a></td>
+<td>
+Computes the median of a variable's rightmost dimension at all other dimensions.
+</td>
+</tr>
+<!--dim_median_n-->
+<tr>
+<td valign=top>
+<a href="dim_median_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_median_n.shtml">
+dim_median_n</a></td>
+<td>
+Computes the median of a variable's given dimensions at all other dimensions.
+</td>
+</tr>
+<!--dim_min-->
+<tr>
+<td valign=top>
+<a href="dim_min.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_min.shtml">
+dim_min</a></td>
+<td>
+Finds the minimum of a variable's rightmost dimension at all other dimensions.
+</td>
+</tr>
+<!--dim_min_n-->
+<tr>
+<td valign=top>
+<a href="dim_min_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_min_n.shtml">
+dim_min_n</a></td>
+<td>
+Finds the minimum of a variable's given dimensions at all other dimensions.
+</td>
+</tr>
+<!--dim_min_n_Wrap-->
+<tr>
+<td valign=top>
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_min_n_Wrap.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_min_n_Wrap.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_min_n_Wrap.shtml">
+dim_min_n_Wrap</a></td>
+<td>
+Computes the minimum of a variable's given dimensions at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_rmsd-->
+<tr>
+<td valign=top>
+<a href="dim_rmsd.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_rmsd.shtml">
+dim_rmsd</a></td>
+<td>
+Computes the root-mean-square-difference between two variables' rightmost  dimension at all other dimensions.
+</td>
+</tr>
+<!--dim_rmsd_n-->
+<tr>
+<td valign=top>
+<a href="dim_rmsd_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_rmsd_n.shtml">
+dim_rmsd_n</a></td>
+<td>
+Computes the root-mean-square-difference between two variables' given dimensions at all other dimensions.
+</td>
+</tr>
+<!--dim_rmsd_n_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_rmsd_n_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_rmsd_n_Wrap.shtml">
+dim_rmsd_n_Wrap</a></td>
+<td>
+Computes the root-mean-square-difference between two variables' given dimensions at all other dimensions.
+</td>
+</tr>
+<!--dim_rmsd_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_rmsd_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_rmsd_Wrap.shtml">
+dim_rmsd_Wrap</a></td>
+<td>
+Computes the root-mean-square-difference between two variables' rightmost  dimension at all other dimensions.
+</td>
+</tr>
+<!--dim_rmvmean-->
+<tr>
+<td valign=top>
+<a href="dim_rmvmean.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_rmvmean.shtml">
+dim_rmvmean</a></td>
+<td>
+Calculates and removes the mean of the (rightmost) dimension at all other dimensions.
+</td>
+</tr>
+<!--dim_rmvmean_n-->
+<tr>
+<td valign=top>
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_rmvmean_n.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_rmvmean_n.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_rmvmean_n.shtml">
+dim_rmvmean_n</a></td>
+<td>
+Calculates and removes the mean of the given dimension(s) at all other dimensions.
+</td>
+</tr>
+<!--dim_rmvmean_n_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_rmvmean_n_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_rmvmean_n_Wrap.shtml">
+dim_rmvmean_n_Wrap</a></td>
+<td>
+Calculates and removes the mean of the given dimensions at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_rmvmean_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_rmvmean_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_rmvmean_Wrap.shtml">
+dim_rmvmean_Wrap</a></td>
+<td>
+Calculates and removes the mean of the (rightmost) dimension at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_rmvmed-->
+<tr>
+<td valign=top>
+<a href="dim_rmvmed.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_rmvmed.shtml">
+dim_rmvmed</a></td>
+<td>
+Calculates and removes the median of the (rightmost) dimension at all other dimensions.
+</td>
+</tr>
+<!--dim_rmvmed_n-->
+<tr>
+<td valign=top>
+<a href="dim_rmvmed_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_rmvmed_n.shtml">
+dim_rmvmed_n</a></td>
+<td>
+Calculates and removes the median of the given dimension(s) at all other dimensions.
+</td>
+</tr>
+<!--dim_rmvmed_n_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_rmvmed_n_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_rmvmed_n_Wrap.shtml">
+dim_rmvmed_n_Wrap</a></td>
+<td>
+Calculates and removes the median of the given dimensions at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_rmvmed_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_rmvmed_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_rmvmed_Wrap.shtml">
+dim_rmvmed_Wrap</a></td>
+<td>
+Calculates and removes the median of the (rightmost) dimension at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_standardize-->
+<tr>
+<td valign=top>
+<a href="dim_standardize.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_standardize.shtml">
+dim_standardize</a></td>
+<td>
+Calculates standardized anomalies of the rightmost dimension at all other dimensions.
+</td>
+</tr>
+<!--dim_standardize_n-->
+<tr>
+<td valign=top>
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_standardize_n.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_standardize_n.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_standardize_n.shtml">
+dim_standardize_n</a></td>
+<td>
+Calculates standardized anomalies of the given dimension(s) at all other dimensions.
+</td>
+</tr>
+<!--dim_standardize_n_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_standardize_n_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_standardize_n_Wrap.shtml">
+dim_standardize_n_Wrap</a></td>
+<td>
+Calculates standardized anomalies of the given dimensions at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_standardize_Wrap-->
+<tr>
+<td valign=top>
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_standardize_Wrap.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_standardize_Wrap.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_standardize_Wrap.shtml">
+dim_standardize_Wrap</a></td>
+<td>
+Calculates standardized anomalies of the rightmost dimension at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_stat4-->
+<tr>
+<td valign=top>
+<a href="dim_stat4.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_stat4.shtml">
+dim_stat4</a></td>
+<td>
+Computes the first four moments (average, sample variance, skewness, and kurtosis) of the rightmost dimension for all other dimensions.
+</td>
+</tr>
+<!--dim_stat4_n-->
+<tr>
+<td valign=top>
+<a href="dim_stat4_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_stat4_n.shtml">
+dim_stat4_n</a></td>
+<td>
+Computes the first four moments (average, sample variance, skewness, and kurtosis) of the given dimension(s) for all other dimensions.
+</td>
+</tr>
+<!--dim_stddev-->
+<tr>
+<td valign=top>
+<a href="dim_stddev.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_stddev.shtml">
+dim_stddev</a></td>
+<td>
+Computes the sample standard deviation of a variable's rightmost dimension at all other dimensions.
+</td>
+</tr>
+<!--dim_stddev_n-->
+<tr>
+<td valign=top>
+<a href="dim_stddev_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_stddev_n.shtml">
+dim_stddev_n</a></td>
+<td>
+Computes the sample standard deviation of a variable's given dimension(s) at all other dimensions.
+</td>
+</tr>
+<!--dim_stddev_n_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_stddev_n_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_stddev_n_Wrap.shtml">
+dim_stddev_n_Wrap</a></td>
+<td>
+Computes the sample standard deviation of a variable's given dimension(s) at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_stddev_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_stddev_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_stddev_Wrap.shtml">
+dim_stddev_Wrap</a></td>
+<td>
+Computes the sample standard deviation of a variable's rightmost dimension at all  other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_sum_wgt_n_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_sum_wgt_n_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_sum_wgt_n_Wrap.shtml">
+dim_sum_wgt_n_Wrap</a></td>
+<td>
+Computes the weighted sum of a variable's given dimension at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_sum_wgt_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_sum_wgt_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_sum_wgt_Wrap.shtml">
+dim_sum_wgt_Wrap</a></td>
+<td>
+Computes the weighted sum of a variable's rightmost dimension at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_variance-->
+<tr>
+<td valign=top>
+<a href="dim_variance.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_variance.shtml">
+dim_variance</a></td>
+<td>
+Computes the unbiased estimates of the variance of a variable's rightmost dimension.
+</td>
+</tr>
+<!--dim_variance_n-->
+<tr>
+<td valign=top>
+<a href="dim_variance_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dim_variance_n.shtml">
+dim_variance_n</a></td>
+<td>
+Computes the unbiased estimates of the variance of a variable's given dimension(s) at all other dimensions.
+</td>
+</tr>
+<!--dim_variance_n_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_variance_n_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_variance_n_Wrap.shtml">
+dim_variance_n_Wrap</a></td>
+<td>
+Computes unbiased estimates of the variance of a variable's given dimension(s) at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dim_variance_Wrap-->
+<tr>
+<td valign=top>
+<a href="dim_variance_Wrap.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/dim_variance_Wrap.shtml">
+dim_variance_Wrap</a></td>
+<td>
+Computes unbiased estimates of the variance of a variable's rightmost dimension at all other dimensions and retains metadata.
+</td>
+</tr>
+<!--dtrend-->
+<tr>
+<td valign=top>
+<a href="dtrend.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dtrend.shtml">
+dtrend</a></td>
+<td>
+Estimates and removes the least squares linear trend of the rightmost dimension from all grid points.
+</td>
+</tr>
+<!--dtrend_msg-->
+<tr>
+<td valign=top>
+<a href="dtrend_msg.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dtrend_msg.shtml">
+dtrend_msg</a></td>
+<td>
+Estimates and removes the least squares linear trend of the rightmost dimension from all grid points (<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Language/fillval.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Language/fillval.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Language/fillval.shtml">missing values</a> allowed).
+</td>
+</tr>
+<!--dtrend_msg_n-->
+<tr>
+<td valign=top>
+<a href="dtrend_msg_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dtrend_msg_n.shtml">
+dtrend_msg_n</a></td>
+<td>
+Estimates and removes the least squares linear trend of the <em>dim</em>-th dimension from all grid points (<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Language/fillval.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Language/fillval.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Language/fillval.shtml">missing values</a> allowed).
+</td>
+</tr>
+<!--dtrend_n-->
+<tr>
+<td valign=top>
+<a href="dtrend_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dtrend_n.shtml">
+dtrend_n</a></td>
+<td>
+Estimates and removes the least squares linear trend of the given dimension from all grid points.
+</td>
+</tr>
+<!--dtrend_quadratic-->
+<tr>
+<td valign=top>
+<a href="dtrend_quadratic.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dtrend_quadratic.shtml">
+dtrend_quadratic</a></td>
+<td>
+Estimates and removes the least squares quadratic trend of the rightmost dimension from all grid points.
+</td>
+</tr>
+<!--dtrend_quadratic_msg_n-->
+<tr>
+<td valign=top>
+<a href="dtrend_quadratic_msg_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/dtrend_quadratic_msg_n.shtml">
+dtrend_quadratic_msg_n</a></td>
+<td>
+Estimates and removes the least squares quadratic trend of the <em>dim</em>-th dimension from all grid points (<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Language/fillval.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Language/fillval.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Language/fillval.shtml">missing values</a> allowed).
+</td>
+</tr>
+<!--equiv_sample_size-->
+<tr>
+<td valign=top>
+<a href="equiv_sample_size.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/equiv_sample_size.shtml">
+equiv_sample_size</a></td>
+<td>
+Estimates the number of independent values of a series of correlated observations.
+</td>
+</tr>
+<!--esccr-->
+<tr>
+<td valign=top>
+<a href="esccr.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/esccr.shtml">
+esccr</a></td>
+<td>
+Computes sample cross-correlations.
+</td>
+</tr>
+<!--esccv-->
+<tr>
+<td valign=top>
+<a href="esccv.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/esccv.shtml">
+esccv</a></td>
+<td>
+Computes sample cross-covariances.
+</td>
+</tr>
+<!--escorc-->
+<tr>
+<td valign=top>
+<a href="escorc.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/escorc.shtml">
+escorc</a></td>
+<td>
+Computes the (Pearson) sample linear cross-correlations at lag 0 only.
+</td>
+</tr>
+<!--escorc_n-->
+<tr>
+<td valign=top>
+<a href="escorc_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/escorc_n.shtml">
+escorc_n</a></td>
+<td>
+Computes the (Pearson) sample linear cross-correlations at lag 0 only, across the specified dimensions.
+</td>
+</tr>
+<!--escovc-->
+<tr>
+<td valign=top>
+<a href="escovc.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/escovc.shtml">
+escovc</a></td>
+<td>
+Computes sample cross-covariances at lag 0 only.
+</td>
+</tr>
+<!--extval_frechet-->
+<tr>
+<td valign=top>
+<a href="extval_frechet.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Ext_val/extval_frechet.shtml">
+extval_frechet</a></td>
+<td>
+Calculates the probability (PDF) and cumulative (CDF) distribution functions of the  Frechet Type II distribution given the shape, scale and location parameters.
+</td>
+</tr>
+<!--extval_gev-->
+<tr>
+<td valign=top>
+<a href="extval_gev.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Ext_val/extval_gev.shtml">
+extval_gev</a></td>
+<td>
+Calculates the probability (PDF) and cumulative (CDF) distribution functions of the  Generalized Extreme Value (GEV) distribution given the shape, scale and location parameters.
+</td>
+</tr>
+<!--extval_gumbel-->
+<tr>
+<td valign=top>
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Ext_val/extval_gumbel.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Ext_val/extval_gumbel.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Ext_val/extval_gumbel.shtml">
+extval_gumbel</a></td>
+<td>
+Calculates the probability (PDF) and cumulative (CDF) distribution functions of the  Gumbel (Type I) distribution function given the scale and location parameters.
+</td>
+</tr>
+<!--extval_mlegam-->
+<tr>
+<td valign=top>
+<a href="extval_mlegam.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Ext_val/extval_mlegam.shtml">
+extval_mlegam</a></td>
+<td>
+Estimates the location, shape, scale and other parameters for the Gamma distribution using maximum-likelihood estimation (MLE).
+</td>
+</tr>
+<!--extval_mlegev-->
+<tr>
+<td valign=top>
+<a href="extval_mlegev.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/extval_mlegev.shtml">
+extval_mlegev</a></td>
+<td>
+Estimates the shape, scale and location parameters for the Generalized Extreme-Value (GEV) distribution using Maximum-Likelihood Estimation (MLE).
+</td>
+</tr>
+<!--extval_pareto-->
+<tr>
+<td valign=top>
+<a href="extval_pareto.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Ext_val/extval_pareto.shtml">
+extval_pareto</a></td>
+<td>
+Calculates the probability (PDF) and cumulative (CDF) distribution functions of the  Pareto distributions (Generalized, Type I, TYpe II) given the shape, scale and location parameters.
+</td>
+</tr>
+<!--extval_recurrence_table-->
+<tr>
+<td valign=top>
+<a href="extval_recurrence_table.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Ext_val/extval_recurrence_table.shtml">
+extval_recurrence_table</a></td>
+<td>
+Calculates the recurrence interval (<em>return period</em>), cumulative and exceedence probabilities based upon a time series.
+</td>
+</tr>
+<!--extval_return_period-->
+<tr>
+<td valign=top>
+<a href="extval_return_period.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Ext_val/extval_return_period.shtml">
+extval_return_period</a></td>
+<td>
+Calculates the period of an event (eg, flood, heat wave, drought)  occurring given an average event recurrence interval and specified probability level.
+</td>
+</tr>
+<!--extval_return_prob-->
+<tr>
+<td valign=top>
+<a href="extval_return_prob.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Ext_val/extval_return_prob.shtml">
+extval_return_prob</a></td>
+<td>
+Calculates the probability of an event (eg, flood, heat wave, drought) given an average event interval and a specified exceedance period.
+</td>
+</tr>
+<!--extval_weibull-->
+<tr>
+<td valign=top>
+<a href="extval_weibull.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Ext_val/extval_weibull.shtml">
+extval_weibull</a></td>
+<td>
+Calculates the probability (PDF) and cumulative (CDF) distribution functions of the  Weibull Type III distribution given the shape, scale and location parameters.
+</td>
+</tr>
+<!--ftest-->
+<tr>
+<td valign=top>
+<a href="ftest.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/ftest.shtml">
+ftest</a></td>
+<td>
+Applies F-test for variances and returns an estimate of the statistical significance.
+</td>
+</tr>
+<!--genNormalDist-->
+<tr>
+<td valign=top>
+<a href="genNormalDist.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/genNormalDist.shtml">
+genNormalDist</a></td>
+<td>
+Generates a normal distribution.
+</td>
+</tr>
+<!--kmeans_as136-->
+<tr>
+<td valign=top>
+<a href="kmeans_as136.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/kmeans_as136.shtml">
+kmeans_as136</a></td>
+<td>
+Performs k-means clustering via the Hartigan and Wong AS-136 algorithm.
+</td>
+</tr>
+<!--kolsm2_n-->
+<tr>
+<td valign=top>
+<a href="kolsm2_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/kolsm2_n.shtml">
+kolsm2_n</a></td>
+<td>
+Uses the Kolmogorov-Smirnov two-sample test to determine if two samples are from the same distribution.
+</td>
+</tr>
+<!--max-->
+<tr>
+<td valign=top>
+<a href="max.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/max.shtml">
+max</a></td>
+<td>
+Computes the maximum value of a multi-dimensional array.
+</td>
+</tr>
+<!--min-->
+<tr>
+<td valign=top>
+<a href="min.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/min.shtml">
+min</a></td>
+<td>
+Computes the minimum value of a multi-dimensional array.
+</td>
+</tr>
+<!--pattern_cor-->
+<tr>
+<td valign=top>
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Contributed/pattern_cor.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Contributed/pattern_cor.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/pattern_cor.shtml">
+pattern_cor</a></td>
+<td>
+Compute centered or uncentered  pattern correlation.
+</td>
+</tr>
+<!--pdfxy-->
+<tr>
+<td valign=top>
+<a href="pdfxy.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/pdfxy.shtml">
+pdfxy</a></td>
+<td>
+Generates a joint probability density distribution. (Please use <a href="pdfxy_conform.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/pdfxy_conform.shtml"><strong>pdfxy_conform</strong></a>.)
+</td>
+</tr>
+<!--pdfxy_bin-->
+<tr>
+<td valign=top>
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/pdfxy_bin.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/pdfxy_bin.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/pdfxy_bin.shtml">
+pdfxy_bin</a></td>
+<td>
+Performs looping necessary to calculate the bivariate  (joint) probability distribution (see <a href="pdfxy.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/pdfxy.shtml"><strong>pdfxy</strong></a>).
+</td>
+</tr>
+<!--pdfxy_conform-->
+<tr>
+<td valign=top>
+<a href="pdfxy_conform.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/pdfxy_conform.shtml">
+pdfxy_conform</a></td>
+<td>
+An interface to <a href="pdfxy.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/pdfxy.shtml"><strong>pdfxy</strong></a> that allows the input arrays to be different sizes.
+</td>
+</tr>
+<!--regcoef-->
+<tr>
+<td valign=top>
+<a href="regcoef.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/regcoef.shtml">
+regcoef</a></td>
+<td>
+Calculates the linear regression coefficient between two variables.
+</td>
+</tr>
+<!--regCoef-->
+<tr>
+<td valign=top>
+<a href="regCoef-1.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/regCoef-1.shtml">
+regCoef</a></td>
+<td>
+Calculates the linear regression coefficient between two variables.
+</td>
+</tr>
+<!--regCoef_n-->
+<tr>
+<td valign=top>
+<a href="regCoef_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/regCoef_n.shtml">
+regCoef_n</a></td>
+<td>
+Calculates the linear regression coefficient between two variables on the given dimensions.
+</td>
+</tr>
+<!--regline-->
+<tr>
+<td valign=top>
+<a href="regline.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/regline.shtml">
+regline</a></td>
+<td>
+Calculates the linear regression coefficient between two series.
+</td>
+</tr>
+<!--spcorr-->
+<tr>
+<td valign=top>
+<a href="spcorr.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/spcorr.shtml">
+spcorr</a></td>
+<td>
+Computes <a href="javascript:if(confirm('http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient'" tppabs="http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient"> <b>Spearman rank order correlation (Rho)</b></a> correlation coefficient.
+</td>
+</tr>
+<!--spcorr_n-->
+<tr>
+<td valign=top>
+<a href="spcorr_n.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/spcorr_n.shtml">
+spcorr_n</a></td>
+<td>
+Computes  <a href="javascript:if(confirm('http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient'" tppabs="http://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient"> <b>Spearman rank order correlation (Rho)</b></a> correlation coefficient across the given dimension.
+</td>
+</tr>
+<!--stat2-->
+<tr>
+<td valign=top>
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/stat2.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/stat2.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/stat2.shtml">
+stat2</a></td>
+<td>
+Calculates the first two moments of the given input.
+</td>
+</tr>
+<!--stat4-->
+<tr>
+<td valign=top>
+<a href="stat4.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/stat4.shtml">
+stat4</a></td>
+<td>
+Calculates estimates of the first four moments (mean, variance, skewness, and kurtosis) of the given input.
+</td>
+</tr>
+<!--stat_dispersion-->
+<tr>
+<td valign=top>
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Contributed/stat_dispersion.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Contributed/stat_dispersion.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Contributed/stat_dispersion.shtml">
+stat_dispersion</a></td>
+<td>
+Computes a number of robust statistics.
+</td>
+</tr>
+<!--stat_medrng-->
+<tr>
+<td valign=top>
+<a href="stat_medrng.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/stat_medrng.shtml">
+stat_medrng</a></td>
+<td>
+Calculates median, range, and mid-range of the given input.
+</td>
+</tr>
+<!--stat_trim-->
+<tr>
+<td valign=top>
+<a href="stat_trim.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/stat_trim.shtml">
+stat_trim</a></td>
+<td>
+Calculates trimmed estimates of the first two moments of the given input.
+</td>
+</tr>
+<!--stddev-->
+<tr>
+<td valign=top>
+<a href="stddev.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/stddev.shtml">
+stddev</a></td>
+<td>
+Calculates the sample standard deviation.
+</td>
+</tr>
+<!--student_t-->
+<tr>
+<td valign=top>
+<a href="student_t.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/student_t.shtml">
+student_t</a></td>
+<td>
+Calculates the two-tailed probability of the Student-t distribution.
+</td>
+</tr>
+<!--trend_manken-->
+<tr>
+<td valign=top>
+<a href="trend_manken.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/trend_manken.shtml">
+trend_manken</a></td>
+<td>
+Calculates <a href="javascript:if(confirm('http://vsp.pnnl.gov/help/Vsample/Design_Trend_Mann_Kendall.htm  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://vsp.pnnl.gov/help/Vsample/Design_Trend_Mann_Kendall.htm'" tppabs="http://vsp.pnnl.gov/help/Vsample/Design_Trend_Mann_Kendall.htm">Mann-Kendall  non-parametric test for monotonic trend</a> and the <a href="javascript:if(confirm('http://en.wikipedia.org/wiki/Theil%E2%80%93Sen_estimator  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://en.wikipedia.org/wiki/Theil%E2%80%93Sen_estimator'" tppabs="http://en.wikipedia.org/wiki/Theil%E2%80%93Sen_estimator">Theil-Sen</a> robust estimate of linear trend.
+</td>
+</tr>
+<!--ttest-->
+<tr>
+<td valign=top>
+<a href="ttest.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/ttest.shtml">
+ttest</a></td>
+<td>
+Returns an estimate of the statistical significance and, optionally, the t-values.
+</td>
+</tr>
+<!--variance-->
+<tr>
+<td valign=top>
+<a href="variance.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/variance.shtml">
+variance</a></td>
+<td>
+Computes an unbiased estimate the variance of all input points.
+</td>
+</tr>
+<!--weibull-->
+<tr>
+<td valign=top>
+<a href="weibull.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/weibull.shtml">
+weibull</a></td>
+<td>
+Derives the shape and scale parameters for the Weibull distribution via maximum likelihood estimates.
+</td>
+</tr>
+
+</table><p>
+					</div>
+
+					<p>&nbsp;</p>
+
+		<!-- begin footer -->
+		<div id="footer">
+
+		<p>&#169;2016 <a href="javascript:if(confirm('http://www.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ucar.edu/'" tppabs="http://www.ucar.edu/">UCAR</a> | <a href="javascript:if(confirm('http://www2.ucar.edu/privacy-policy  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www2.ucar.edu/privacy-policy'" tppabs="http://www2.ucar.edu/privacy-policy">Privacy Policy</a> | <a href="javascript:if(confirm('http://www2.ucar.edu/terms-of-use  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www2.ucar.edu/terms-of-use'" tppabs="http://www2.ucar.edu/terms-of-use">Terms of Use</a> 
+                   | <a href="mailto:ncladmin@ucar.edu">Contact the Webmaster</a> | <a href="javascript:if(confirm('http://www.nsf.gov/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.nsf.gov/'" tppabs="http://www.nsf.gov/">Sponsored by NSF</a></p>
+
+
+		<!-- end footer -->
+		</div>
+
+           <br class="clearboth"/>
+
+	   <!-- end content -->
+	</div>
+<!-- end wrap -->
+</div>
+</body>
+</html>

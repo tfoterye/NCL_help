@@ -1,0 +1,962 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="description" content="NCL built-in functions (file io)">
+<meta name="keywords" content="setfileoption">
+<title>setfileoption</title>
+</head>
+
+<body>
+	
+	<!-- main navigation include -->
+		<!-- NCL CSS -->
+	<link rel="stylesheet" href="ncl.css" tppabs="http://www.ncl.ucar.edu/styles/ncl.css" type="text/css" media="all">
+	
+	
+		<!-- Equal Height Columns -->
+		<script type="text/javascript" src="column_height_equal.js" tppabs="http://www.ncl.ucar.edu/scripts/column_height_equal.js"></script>
+		
+		<!-- DOJO Expandable Tree Nav -->
+
+		<script type="text/javascript" src="dojo.js" tppabs="http://www.ncl.ucar.edu/scripts/dojo/dojo.js"></script>
+		<script type="text/javascript">
+		
+		dojo.require("dojo.widget.TreeV3");
+		dojo.require("dojo.widget.TreeNodeV3");
+		dojo.require("dojo.widget.TreeLinkExtension");
+		dojo.require("dojo.widget.TreeBasicControllerV3");
+		dojo.hostenv.writeIncludes();
+
+		</script>
+		
+
+		<div id="top_colorbar"><!-- begin top_colorbar -->
+		</div><!-- end top_colorbar -->
+
+
+	<div id="nav_org_wrap"><!-- begin nav_org_wrap -->
+	<div id="nav_org"><!-- begin nav_org -->
+
+		<ul class="menubar">
+
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.ncl.ucar.edu/internal/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/internal/'" tppabs="http://www.ncl.ucar.edu/internal/">&nbsp;</a>
+			</li>
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.ncar.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncar.ucar.edu/'" tppabs="http://www.ncar.ucar.edu/">NCAR</a>
+			</li>
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.cisl.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.cisl.ucar.edu/'" tppabs="http://www.cisl.ucar.edu/">CISL</a>
+			</li>
+			
+			<li><a class="trigger" href="javascript:if(confirm('http://www.vets.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.vets.ucar.edu/'" tppabs="http://www.vets.ucar.edu/">VETS</a>
+			</li>
+		</ul>
+
+	</div><!-- end nav_org -->
+
+	<div id="search"><!-- begin search -->
+
+		<ul class="menubar">
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.ncl.ucar.edu/Download/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Download/'" tppabs="http://www.ncl.ucar.edu/Download/">Download</a>
+			</li>
+
+
+			<li><a class="trigger" href="javascript:if(confirm('http://www.ncl.ucar.edu/contributors.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/contributors.shtml'" tppabs="http://www.ncl.ucar.edu/contributors.shtml">Contributors</a>
+			</li>
+
+		</ul>
+
+	</div><!-- end search -->
+
+	</div><!-- end nav_org_wrap -->
+	
+	
+	
+
+		<div id="nav_main_wrap"><!-- begin nav_main_wrap -->
+
+		<div id="nav_main"><!-- begin nav_main -->
+			<ul id="menubar_main">
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/'" tppabs="http://www.ncl.ucar.edu/" class="triggeron">NCL</a>
+					<ul>
+					  <li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/overview.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/overview.shtml'" tppabs="http://www.ncl.ucar.edu/overview.shtml" class="subitem">Overview</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/get_started.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/get_started.shtml'" tppabs="http://www.ncl.ucar.edu/get_started.shtml" class="subitem">Getting Started</a> </li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/gallery.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/gallery.shtml'" tppabs="http://www.ncl.ucar.edu/gallery.shtml" class="subitem">Gallery</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Download/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Download/'" tppabs="http://www.ncl.ucar.edu/Download/" class="subitem">Download</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/current_release.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/current_release.shtml'" tppabs="http://www.ncl.ucar.edu/current_release.shtml" class="subitem">What's New</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/'" tppabs="http://www.ncl.ucar.edu/Document/" class="subitem">Documentation</a></li>						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/citation.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/citation.shtml'" tppabs="http://www.ncl.ucar.edu/citation.shtml" class="subitem">Citing NCL</a></li>
+					</ul>
+
+				</li>
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/'" tppabs="http://www.ncl.ucar.edu/Applications/" class="trigger">Examples</a>
+					<ul>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/'" tppabs="http://www.ncl.ucar.edu/Applications/" class="subitem" title="Examples">All Examples</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/Templates/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/Templates/'" tppabs="http://www.ncl.ucar.edu/Applications/Templates/" class="subitem">Templates</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_io.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_io.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_io.shtml" class="subitem">File I/O</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_data.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_data.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_data.shtml" class="subitem">Datasets</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_maps.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_maps.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_maps.shtml" class="subitem">Maps</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_models.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_models.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_models.shtml" class="subitem">Models</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_dataP.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_dataP.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_dataP.shtml" class="subitem">Data Analysis</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_ptypes.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_ptypes.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_ptypes.shtml" class="subitem">Plot Types</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_tech.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_tech.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_tech.shtml" class="subitem">Plot Techniques</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_special.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_special.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_special.shtml" class="subitem">Special Plots</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_grids.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_grids.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_grids.shtml" class="subitem">Non-uniform Grids</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/list_misc.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/list_misc.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/list_misc.shtml" class="subitem">Miscellaneous</a></li>
+					</ul>
+				</li>
+
+				<li>
+				<a href="list_alpha.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml" class="trigger">Functions</a>
+					<ul>
+						<li><a href="list_alpha.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/list_alpha.shtml" class="subitem">Alphabetical Listing</a></li>
+						<li><a href="index.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/" class="subitem">Category Listing</a></li>
+						<li><a href="list_type.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/list_type.shtml" class="subitem">Function-Type Listing</a></li>						
+					</ul>
+				</li>
+				
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/" class="trigger">Resources</a>
+					<ul>
+					  <li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/list_alpha_res.shtml" class="subitem">Complete Listing</a></li>
+					
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/am.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/am.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/am.shtml" class="subitem">am (annotation manager)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/app.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/app.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/app.shtml" class="subitem">app (app)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/ca.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/ca.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/ca.shtml" class="subitem">ca (coordinate array)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/cn.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/cn.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/cn.shtml" class="subitem">cn (contour)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/ct.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/ct.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/ct.shtml" class="subitem">ct (coordinate array table)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/dc.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/dc.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/dc.shtml" class="subitem">dc (data comm)</a></li>
+						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/err.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/err.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/err.shtml" class="subitem">err (error)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/gs.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/gs.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/gs.shtml" class="subitem">gs (graphics styles)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/gsn.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/gsn.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/gsn.shtml" class="subitem">gsn (gsn high-level interfaces)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/lb.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/lb.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/lb.shtml" class="subitem">lb (label bar)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/lg.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/lg.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/lg.shtml" class="subitem">lg (legends)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/mp.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/mp.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/mp.shtml" class="subitem">mp (maps)</a></li>
+						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/pm.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/pm.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/pm.shtml" class="subitem">pm (plot manager)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/pr.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/pr.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/pr.shtml" class="subitem">pr (primitives)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/sf.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/sf.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/sf.shtml" class="subitem">sf (scalar field)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/st.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/st.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/st.shtml" class="subitem">st (streamline)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/tf.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/tf.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/tf.shtml" class="subitem">tf (transform)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/ti.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/ti.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/ti.shtml" class="subitem">ti (title)</a></li>
+						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/tm.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/tm.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/tm.shtml" class="subitem">tm (tickmark)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/tr.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/tr.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/tr.shtml" class="subitem">tr (transformation)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/tx.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/tx.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/tx.shtml" class="subitem">tx (text)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/vc.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/vc.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/vc.shtml" class="subitem">vc (vectors)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/vf.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/vf.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/vf.shtml" class="subitem">vf (vector field)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/vp.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/vp.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/vp.shtml" class="subitem">vp (view port)</a></li>
+						
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/wk.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/wk.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/wk.shtml" class="subitem">wk (workstation)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/ws.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/ws.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/ws.shtml" class="subitem">ws (workspace)</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Resources/xy.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Resources/xy.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Resources/xy.shtml" class="subitem">xy (xy plots)</a></li>						
+					</ul>
+        </li>
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/links.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/links.shtml'" tppabs="http://www.ncl.ucar.edu/links.shtml" class="trigger">Popular Links</a>
+					<ul>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/hlures.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/hlures.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/hlures.shtml" class="subitem">.hluresfile</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml" class="subitem">Color Tables</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/font_tables.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/font_tables.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/font_tables.shtml" class="subitem">Font Tables</a></li>	
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Language/error_messages.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Language/error_messages.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Language/error_messages.shtml" class="subitem">Error Messages</a></li>	
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Images/dashpatterns.png  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Images/dashpatterns.png'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Images/dashpatterns.png" class="subitem">Dash Pattern Table</a></li>	
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Images/fillpatterns.png  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Images/fillpatterns.png'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Images/fillpatterns.png" class="subitem">Fill Pattern Table</a></li>	
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/Images/markers.png  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/Images/markers.png'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/Images/markers.png" class="subitem">Marker Table</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/map_projections.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/map_projections.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/map_projections.shtml" class="subitem">Map Projections</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Graphics/rangs.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Graphics/rangs.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Graphics/rangs.shtml" class="subitem">High Resolution Map Database</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/editor.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/editor.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/editor.shtml" class="subitem">Editor Enhancements</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Tools/ncl_convert2nc.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Tools/ncl_convert2nc.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Tools/ncl_convert2nc.shtml">ncl_convert2nc</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Tools/ncl_filedump.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Tools/ncl_filedump.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Tools/ncl_filedump.shtml">ncl_filedump</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Tools/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Tools/'" tppabs="http://www.ncl.ucar.edu/Document/Tools/" class="subitem">Tools</a></li>
+					<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Tools/WRAPIT.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Tools/WRAPIT.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Tools/WRAPIT.shtml" class="subitem">WRAPIT</a></li>
+					</ul>
+				</li>
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/announcements.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/announcements.shtml'" tppabs="http://www.ncl.ucar.edu/announcements.shtml" class="trigger">What's New</a>
+					<ul>
+					        <li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/announcements.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/announcements.shtml'" tppabs="http://www.ncl.ucar.edu/announcements.shtml" class="subitem">Announcements</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/current_release.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/current_release.shtml'" tppabs="http://www.ncl.ucar.edu/current_release.shtml" class="subitem">In Latest Release</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/new_applications.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/new_applications.shtml'" tppabs="http://www.ncl.ucar.edu/new_applications.shtml" class="subitem">In Application Examples</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/future_release.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/future_release.shtml'" tppabs="http://www.ncl.ucar.edu/future_release.shtml" class="subitem">In Next Release</a></li>	
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/prev_releases.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/prev_releases.shtml'" tppabs="http://www.ncl.ucar.edu/prev_releases.shtml" class="subitem">In Previous Releases</a></li>
+					</ul>
+				</li>
+	
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Support/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Support/'" tppabs="http://www.ncl.ucar.edu/Support/" class='trigger'>Support</a>
+					<ul>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Support/email_lists.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Support/email_lists.shtml'" tppabs="http://www.ncl.ucar.edu/Support/email_lists.shtml" class="subitem">Email Lists</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Applications/editor.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Applications/editor.shtml'" tppabs="http://www.ncl.ucar.edu/Applications/editor.shtml" class="subitem">Editor enhancements</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Language/error_messages.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Language/error_messages.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Language/error_messages.shtml" class="subitem">Error messages</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Manuals/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Manuals/'" tppabs="http://www.ncl.ucar.edu/Document/Manuals/" class="subitem">Manuals</a></li>
+						<li><a href="javascript:if(confirm('https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl'" tppabs="https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl">NCL on yellowstone</a>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Training/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Training/'" tppabs="http://www.ncl.ucar.edu/Training/" class="subitem">Training</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Training/Webinars/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Training/Webinars/'" tppabs="http://www.ncl.ucar.edu/Training/Webinars/" class="subitem">Webinars</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Training/Workshops/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Training/Workshops/'" tppabs="http://www.ncl.ucar.edu/Training/Workshops/" class="subitem">Workshops</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/'" tppabs="http://www.ncl.ucar.edu/Document/" class="subitem">Documentation</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/FAQ/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/FAQ/'" tppabs="http://www.ncl.ucar.edu/FAQ/" class="subitem">FAQ</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/known_bugs.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/known_bugs.shtml'" tppabs="http://www.ncl.ucar.edu/known_bugs.shtml" class="subitem">Known Bugs</a></li>
+						<li><a href="javascript:if(confirm('http://www.ncl.ucar.edu/report_bug.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/report_bug.shtml'" tppabs="http://www.ncl.ucar.edu/report_bug.shtml" class="subitem">Report Bugs</a></li>
+					</ul>
+				</li>
+
+				<li>
+				<a href="javascript:if(confirm('http://www.ncl.ucar.edu/External/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/External/'" tppabs="http://www.ncl.ucar.edu/External/" class='trigger'>External</a>
+					<ul>
+						<li><a href="javascript:if(confirm('https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl'" tppabs="https://www2.cisl.ucar.edu/resources/geyser_caldera/visualization/ncl" class="subitem">Using NCL on Yellowstone</a></li>
+						<li><a href="javascript:if(confirm('http://climatedataguide.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://climatedataguide.ucar.edu/'" tppabs="http://climatedataguide.ucar.edu/" class="subitem">Climate Data Guide</a></li>
+						<li><a href="javascript:if(confirm('https://code.zmaw.de/projects/cdo/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='https://code.zmaw.de/projects/cdo/'" tppabs="https://code.zmaw.de/projects/cdo/" class="subitem">Climate Data Operators</a></li>
+						<li><a href="javascript:if(confirm('http://www.earthsystemmodeling.org/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.earthsystemmodeling.org/'" tppabs="http://www.earthsystemmodeling.org/" class="subitem">Earth System Modeling Framework</a></li>
+						<li><a href="javascript:if(confirm('http://nco.sourceforge.net/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://nco.sourceforge.net/'" tppabs="http://nco.sourceforge.net/" class="subitem">NetCDF Operators</a></li>
+						<li><a href="javascript:if(confirm('http://trac.mcs.anl.gov/projects/parvis/wiki  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://trac.mcs.anl.gov/projects/parvis/wiki'" tppabs="http://trac.mcs.anl.gov/projects/parvis/wiki" class="subitem">ParVis</a></li>
+						<li><a href="javascript:if(confirm('http://www.pyngl.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.pyngl.ucar.edu/'" tppabs="http://www.pyngl.ucar.edu/" class="subitem">PyNGL</a></li>
+						<li><a href="javascript:if(confirm('http://www.pyngl.ucar.edu/Nio.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.pyngl.ucar.edu/Nio.shtml'" tppabs="http://www.pyngl.ucar.edu/Nio.shtml" class="subitem">PyNIO</a></li>
+					</ul>
+				</li>
+
+			<!-- end menubar_main -->		
+			</ul>
+		
+		<!-- end nav_main -->	
+		</div>
+		
+	<!-- end nav_main_wrap -->	
+  	</div>
+		
+			
+
+	
+	<div id="wrap"><!-- begin wrap -->
+	<div id="content"><!-- begin content -->
+	
+	<!-- ######### BEGIN EDITABLE PAGE CONTENT ######### -->
+
+			<div id="subheader"><!-- begin subheader -->
+			<map name="ncl-home">
+<area shape="rect" coords="0,0,65,40" href="javascript:if(confirm('http://www.ncl.ucar.edu/index.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/index.shtml'" tppabs="http://www.ncl.ucar.edu/index.shtml">
+<area shape="rect" coords="580,0,640,40" href="javascript:if(confirm('http://www.ncar.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncar.ucar.edu/'" tppabs="http://www.ncar.ucar.edu/">
+</map>
+
+	<div id="nclheader">
+	<img src="ncl-b4.jpg" tppabs="http://www.ncl.ucar.edu/Images/ncl-b4.jpg" alt="NCL Website header" usemap="#ncl-home">
+	</div>
+
+
+			<div id="googlesearch">
+<form name="google" action="http://www.ucar.edu/search/googleresults.jsp" id="cse-search-box">
+ <div id="googlesearch">
+   <input type="hidden" name="cx" value="008424664622949020059:afj38jxaljc" />
+   <input type="hidden" name="cof" value="FORID:9" />
+   <input type="hidden" name="ie" value="UTF-8" />
+   <input type="text" name="q" size="12" />
+   <input type=hidden name=hq value="site:www.ncl.ucar.edu">
+   <a href="javascript:if(confirm('http://www2.ucar.edu/advanced-search  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www2.ucar.edu/advanced-search'" tppabs="http://www2.ucar.edu/advanced-search">advanced</a>
+ </div>
+</form> 
+<script type="text/javascript" src="brand-form=cse-search-box&lang=en" tppabs="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>
+				<p class="datetime">  </p>
+
+			</div><!-- end googlesearch -->
+
+			</div><!-- end subheader -->
+			
+			      <div id="general_main">
+<a class=crumb href="javascript:if(confirm('http://www.ncl.ucar.edu/index.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/index.shtml'" tppabs="http://www.ncl.ucar.edu/index.shtml">NCL Home ></a>
+<a class=crumb href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/index.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/index.shtml'" tppabs="http://www.ncl.ucar.edu/Document/index.shtml">Documentation ></a>
+<a class=crumb href="index.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/index.shtml">Functions ></a>
+<a class=crumb href="io.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/io.shtml">File IO</a>
+<br>
+<h1>setfileoption</h1>
+
+<p>
+Sets a number of file-format-specific options.
+</p>
+
+<a name="Prototype"></a>
+<h2>Prototype</h2>
+<pre>
+	procedure setfileoption (
+		format_or_file [1] : string or file,  
+		option         [1] : string,          
+		value                                 
+	)
+</pre>
+<a name="Arguments"></a>
+<h2>Arguments</h2>
+<em>format_or_file</em>
+<p class=indent>Either a string specifying a file format, or a reference to a file
+opened with <a href="addfile.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/addfile.shtml"><strong>addfile</strong></a> or <a href="addfiles.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/addfiles.shtml"><strong>addfiles</strong></a>.
+If set as a string the value must be equal to one of the suffixes accepted
+by NCL as the indicator of a supported format (e.g. "nc", "grb", or "GRIB"), 
+or else "bin" to specify an option supported for binary files.
+</p>
+<em>option</em>
+<p class=indent>A case-insensitive string containing the name of an NCL-supported file
+option.
+</p>
+<em>value</em>
+<p class=indent>A scalar value or one-dimensional array containing the desired value(s)
+to be assigned to the option. The type of this argument is dependent 
+on the requirements of the option being set.
+</p>
+<a name="Description"></a>
+<h2>Description</h2>
+<p>
+This procedure allows the user to set a number of options that are
+dependent on the format of the file accessed. The options have varying
+restrictions concerning when they may be set and the values that are
+acceptable.  If the first argument is a string specifying a format,
+then the option setting applies to any file of the specified format
+when it is first opened using <a href="addfile.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/addfile.shtml"><strong>addfile</strong></a> or
+<a href="addfiles.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/addfiles.shtml"><strong>addfiles</strong></a>. If the first argument is the string
+"bin", then the option setting applies to subsequent calls to the
+built-in binary data reading functions or binary data writing
+procedures. Files referenced by existing file variables will not be
+affected. On the other hand, options set using a file variable as the
+first argument affect only the specified file, and may alter NCL's
+treatment of it dynamically.  
+
+<h3>NetCDF file format options</h3>
+<dl>
+
+
+<dt><b>DefineMode</b> 
+
+<dd><b>Default value</b>: <i>True</i>
+<p>
+
+This option may be set only for files opened for writing.  (Prior to
+version <a href="javascript:if(confirm('http://www.ncl.ucar.edu/prev_releases.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/prev_releases.shtml#4.3.1'" tppabs="http://www.ncl.ucar.edu/prev_releases.shtml#4.3.1">4.3.1</a>, it defaulted
+to
+<i>False</i>.)  When set
+<i>True</i>, rather than performing each operation atomically, 
+NCL keeps the NetCDF
+library in define mode without closing the file while dimensions,
+attributes, and variables are defined using the functions
+<a href="filedimdef.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/filedimdef.shtml"><strong>filedimdef</strong></a>, <a href="fileattdef.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fileattdef.shtml"><strong>fileattdef</strong></a>,
+<a href="filevardef.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/filevardef.shtml"><strong>filevardef</strong></a>, and <a href="filevarattdef.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/filevarattdef.shtml"><strong>filevarattdef</strong></a>.
+The file remains open in define mode until variable data is read or
+written, the option is set False again, or the file variable is
+deleted.  Setting this option <i>True</i> while dimensions, variables
+and attributes are first defined can improve performance dramatically
+for files with large dimensions or many variables and attributes.
+Care should be taken to define all dimensions, attributes, and variables
+before writing actual data to the file.
+<p>
+
+<dt><b>CompressionLevel</b>
+
+<dd><b>Default value</b>: -1
+<p>
+
+Specify the level of data compression as an integer in the range 0
+through 9. Increasing values indicate greater compression. Compression
+is lossless. There are tradeoffs between the time spent compressing
+the file, versus the amount of compression achieved. Informal tests
+show that compression level 9 results in a file only a few percent
+smaller than a compression level 5 file, but it requires 4 or 5 times
+the amount of time to create it. (This option is ignored unless the
+<b>Format</b> option is set to <i>"NetCDF4Classic"</i> or <i>"NetCDF4"</i>.)
+<p>
+
+<dt><b>Format</b> 
+
+<dd><b>Default value</b>: <i>"Classic"</i>
+<p>
+
+You may set this option only prior to opening a new NetCDF file in
+"create" mode.  The first argument must be a string specifying the
+NetCDF format, such as "nc".  This string-valued option currently has
+four valid values, two of which are synonyms.
+
+<p>A value of <i>"Classic"</i> indicates that a standard NetCDF file
+should be created. Standard NetCDF files are more limited with respect
+to size. Assuming the underlying file system has support for large
+files, the total size can exceed 2 GB, but there are severe
+restrictions regarding the number of large variables and the order in
+which they are written. In general, the standard format should be used
+if and only if it is known that the total file size will be less than
+2 GB.
+
+<p>The two synonymous values, <i>"LargeFile"</i> and
+<i>"64BitOffset"</i>, indicate that a NetCDF file with support for
+larger variables and a theoretically much larger total size (about
+9.22e+18 bytes) should be created. Each fixed-size variable, or each
+'record' (first dimension) of a variable with an unlimited dimension
+of a 64-bit offset file can have a size of up to 4 GB.
+<p>
+
+Again, assuming the underlying file system has support for large
+files, recent versions of NCL can transparently read NetCDF files in
+either the classic or the 64-bit offset format. For more detailed
+information about large file support in NetCDF see <a href="javascript:if(confirm('http://www.unidata.ucar.edu/software/netcdf/docs/netcdf/Large-File-Support.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.unidata.ucar.edu/software/netcdf/docs/netcdf/Large-File-Support.html'" tppabs="http://www.unidata.ucar.edu/software/netcdf/docs/netcdf/Large-File-Support.html">
+http://www.unidata.ucar.edu/software/netcdf/docs/netcdf/Large-File-Support.html</a>.
+<p>
+
+
+<p>In <a href="javascript:if(confirm('http://www.ncl.ucar.edu/prev_releases.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/prev_releases.shtml#4.3.1'" tppabs="http://www.ncl.ucar.edu/prev_releases.shtml#4.3.1">version 4.3.1</a> or
+later, you can specify <i>"NetCDF4Classic"</i> to create a
+file using the <a
+href="javascript:if(confirm('http://www.unidata.ucar.edu/software/netcdf/netcdf-4/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.unidata.ucar.edu/software/netcdf/netcdf-4/'" tppabs="http://www.unidata.ucar.edu/software/netcdf/netcdf-4/">NetCDF
+4</a> classic model format. The classic model constrains the
+interface to the constructs provided by NetCDF 3 and earlier.
+However, the underlying file format, like that of all NetCDF 4 files,
+is HDF 5. Files written in this format can take advantage of the
+built-in file compression available in HDF 5. Use the
+<b>CompressionLevel</b> option (see above) to enable compression. Also
+the HDF 5 format removes virtually all restrictions on file and
+individual variable size.
+<p>
+
+<p>In <a href="javascript:if(confirm('http://www.ncl.ucar.edu/prev_releases.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/prev_releases.shtml#6.1.0'" tppabs="http://www.ncl.ucar.edu/prev_releases.shtml#6.1.0">version 6.1.0</a> or
+later, you can specify <i>"NetCDF4"</i> to create a file using the
+<a href="javascript:if(confirm('http://www.unidata.ucar.edu/software/netcdf/netcdf-4/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.unidata.ucar.edu/software/netcdf/netcdf-4/'" tppabs="http://www.unidata.ucar.edu/software/netcdf/netcdf-4/">NetCDF 4</a>
+model format. The underlying file format, like that of all NetCDF 4 files,
+is HDF 5. Files written in this format can take advantage of the
+NetCDF-4 features, such as compression, chunking, etc, and new data
+types such as string, vlen, compound, enum, opaque.
+<p>
+
+<dt><b>HeaderReserveSpace</b> 
+
+<dd><b>Default value</b>: 0
+<p>
+
+This option may be set only for files opened for writing. This
+integer-valued option may be used to reserve extra space at the
+beginning of a NetCDF file in order to define new dimensions,
+variables, or attributes after variable data has been written. It
+specifies the number of bytes to reserve in the header portion of the
+file in addition to the bytes used for the currently defined
+dimensions, variables, and attributes. Note that the space is
+reserved only when variable data is actually written to the file.
+<p>
+
+
+<dt><b>MissingToFillValue</b>
+
+<dd><b>Default value</b>: <i>True</i>
+<p>
+
+This logical-valued option has an effect only when set prior to
+opening an existing NetCDF file in read or write mode.  If set to 
+<i>True</i>, it causes a "virtual" <i>_FillValue</i> attribute to be
+created for any variable that has the attribute
+<i>missing_value</i> but not <i>_FillValue</i>. The purpose is to more
+gracefully handle files that use the COARDS-compliant
+<i>missing_value</i> instead of <i>_FillValue</i> to indicate missing
+data.  Note that if a variable in a file has both a
+<i>missing_value</i> and a <i>_FillValue</i>, or if it has neither,
+the option does nothing.  The virtual <i>_FillValue</i> attribute is
+not actually part of the NetCDF file, but only appears to be from
+within the NCL environment.  However, it is propagated upon assignment
+of the variable just like any other attribute. If the file is opened
+for writing and you assign to the attribute, it becomes an actual
+attribute. Therefore to make it a permanent part of a file you could
+simply execute a statement such as:
+
+<pre>f->v@_FillValue = f->v@_FillValue</pre>
+
+Unfortunately, there is no simple way within NCL to tell whether a particular 
+instance of a <i>_FillValue</i> attribute (where there is also a <i>missing_value</i> attribute
+with the same value) is virtual or actual. However note that executing the statement
+above is a harmless no-op if the variable's <i>_FillValue</i> attribute actually exists in the file.
+<p>
+
+<dt><b>PreFill</b> 
+
+<dd><b>Default value</b>: <i>True</i>
+<p>
+
+This logical-valued option may be set only for files opened for
+writing. If set <i>False</i>, NCL alters the standard behavior of the
+NetCDF library such that variable element locations in the file are
+not "pre-filled" with the missing (fill) value associated with the
+variable. This can noticeably improve performance when writing large
+datasets. However, if you set this option <i>False</i>, you are
+responsible for ensuring that all the elements of the variables you
+have defined are assigned a valid value.
+<p>
+
+<dt><a name="SuppressClose"></a><b>SuppressClose</b> 
+
+<dd><b>Default value</b>: <i>True</i>
+<p>
+
+This logical-valued option may be set for any NetCDF file. (Before
+version <a href="javascript:if(confirm('http://www.ncl.ucar.edu/prev_releases.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/prev_releases.shtml#4.3.1'" tppabs="http://www.ncl.ucar.edu/prev_releases.shtml#4.3.1">4.3.1</a>, it defaulted
+to <i>False</i>.) When set to <i>False</i>  NCL opens a file each time an operation
+involving reading or writing data occurs and closes it again when the
+operation is complete. This helps ensure the file's integrity but may
+result in loss of performance. When this option is set to <i>True</i>, NCL will
+only only close the file when the user invokes 'delete' on the file
+object variable, the option is set False again, or when NCL exits. 
+Note that when set to <i>True</i>, if NCL quits unexpectedly there is 
+a small possibility that a file open for writing may corrupted. 
+The <b>DefineMode</b> option also keeps the file open, but only until the first operation
+that requires leaving define mode is completed.  <b>SuppressClose</b>
+and <b>DefineMode</b> may be used together in files open for writing.
+
+<p>Users who invoke the <a href="addfiles.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/addfiles.shtml"><strong>addfiles</strong></a> function to open <i>many</i> files
+in an aggregated list should be aware that there
+are limits on the number of files that can be simultaneously open.
+<i>Many</i> is, of course, a relative term.  <a
+href="javascript:if(confirm('http://www.opendap.org/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.opendap.org/'" tppabs="http://www.opendap.org/">OPeNDAP-enabled</a> NCL is restricted
+by the OPeNDAP NetCDF client library to 64 open files when accessing
+NetCDF files either locally or over the network.  Otherwise, typical
+Unix/Linux systems usually allow 1024 open files, although this value
+can vary for older or less-common sytems, and it can also be tweaked when building the OS kernel. 
+The actual number of open files possible may be somewhat less than the limit because of file
+descriptors used internally. In cases where these values might be exceeded, 
+setting this option to <i>False</i> removes the limitation on the number of 
+files in an aggregated list. 
+
+<dt><b>Shuffle</b> 
+
+<dd><b>Default value</b>: <i>1</i>
+<p>
+
+This option has two valid (integer) values: <i>1</i>,
+and <i>0</i>, where 1 means turning HDF5 (compression) shuffle filter on, 
+and 0 means off. Turning the shuffle filter on can improve the compression ratio for
+integer data. 
+<p>
+
+This option has an effect only when writing full model NetCDF4 compressed files. When writing
+NetCDF4 classic model file using the <i>Standard</i> file structure (see the <i>FileStructure</i> option)
+the shuffle filter is always on, regardless of the setting of this option.
+
+<b>This option can only be set after the file has been created</b>.
+
+</dl>
+
+<h3>GRIB file format options</h3>
+<dl>
+<dt><b>DefaultNCEPPTable</b>
+
+<dd><b>Default value</b>: <i>"Operational"</i>
+<p>
+
+This option applies only to GRIB1-formatted files.<p>
+
+This string-valued option has two valid values:
+<i>"Operational"</i> or <i>"Reanalysis"</i>. It specifies whether to
+default to the use of the NCEP operational parameter
+table <a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Manuals/Ref_Manual/ncep_opn.htm  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Manuals/Ref_Manual/ncep_opn.htm'" tppabs="http://www.ncl.ucar.edu/Document/Manuals/Ref_Manual/ncep_opn.htm">
+(http://www.ncl.ucar.edu/Document/Manuals/Ref_Manual/ncep_opn.htm)</a>
+
+or the NCEP reanalysis parameter
+table <a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Manuals/Ref_Manual/ncep_reanal.htm  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Manuals/Ref_Manual/ncep_reanal.htm'" tppabs="http://www.ncl.ucar.edu/Document/Manuals/Ref_Manual/ncep_reanal.htm">
+(http://www.ncl.ucar.edu/Document/Manuals/Ref_Manual/ncep_reanal.htm)</a>.
+The option only applies in cases where NCL, on its own, cannot
+definitively determine which of these tables to use because of
+historical ambiguities in NCEP usage.
+<p>
+
+<dt><b>InitialTimeCoordinateType</b>
+
+<dd><b>Default value</b>: <i>"Numeric"</i>
+<p>
+
+<p>This option applies to GRIB1- and GRIB2-formatted files.<p>
+
+This string-valued option has two valid values: <i>"Numeric"</i>
+or <i>"String"</i>. A value of <i>"Numeric"</i> makes the initial time
+coordinates conform to a COARDS-compliant numeric time in hours since
+1800-01-01 (00.00).
+<p>
+
+Prior to
+version <a href="javascript:if(confirm('http://www.ncl.ucar.edu/prev_releases.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/prev_releases.shtml#4.2.0.a034'" tppabs="http://www.ncl.ucar.edu/prev_releases.shtml#4.2.0.a034">4.2.0.a034</a>, this
+option defaulted to <i>"String"</i>. NCL used an array of strings to
+represent the coordinate values of an initial time dimension.  This
+representation proved to be problematic, both because it did not
+conform to standard CF and COARDS conventions, and because it was
+difficult to use in a context where numerical properties such as
+monotonicity were usually expected. The <i>"String"</i> default was
+originally retained for backwards compatibility, but because of the
+problems described above, it was decided to make the default
+<i>"Numeric"</i>.
+<p>
+
+By setting this option to <i>"String"</i>, you can maintain backwards
+compatibility with versions before 4.3.0.  If this option is set
+after adding a GRIB file, any initial time dimensions in the file will
+immediately be updated to reflect the new option value.
+<p>
+
+Note: in NCL's representation of GRIB1 and GRIB2 files, the initial time
+dimension is distinguished from the forecast time dimension, whose
+coordinate values are numerical offsets from a particular initial
+time.
+<p>
+
+<dt><b>SingleElementDimensions</b> 
+
+<dd><b>Default value</b>: <i>"None"</i>
+<p>
+
+<p>This option applies to GRIB1- and GRIB2-formatted files.<p>
+
+This string-valued option allows the user to specify that variables
+with only a single initial time, forecast time, level, ensemble or
+probability value, usually handled as attributes, be treated as
+containing single element dimensions. A value of <i>"None"</i> means
+that no single-element dimensions will appear in NCL's representation
+of the GRIB file. Conversely, if the option is given the
+value <i>"All"</i>, then all possible dimensions will be created for
+each variable. Otherwise, the desired single element dimensions may be
+specified individually. The valid choices are
+<i>"Initial_time"</i>, <i>"Forecast_time"</i>, <i>"Level"</i>,
+<i>"Ensemble"</i>, and <i>"Probability"</i>. Since this option can
+take an array of values, you can specify more than one of these
+dimension types as the option value. However, the options <i>"None"</i>
+and <i>"All"</i> override the individual dimension specifications. 
+
+<p>Note that dimensions are not created if the variable does not have
+an actual value associated with the dimension type, regardless of the
+value given to this option. For example, variables that are not part
+of an ensemble forecast will never have an ensemble dimension, and
+variables whose level type (e.g. Tropopause) does not have a numerical
+value will never have a level dimension. In the case of level types,
+it may depend on who wrote the record: files written by some
+centers may give no value for certain level types where others may
+use the numerical value 0.
+The intent of this option is to make it easier to concatenate conforming
+variables from multiple files together.
+
+<p>
+
+<dt><b>TimePeriodSuffix</b>
+
+<dd><b>Default value</b>: <i>True</i>
+<p>
+
+<p>This option applies to GRIB1- and GRIB2-formatted files. A value of
+True indicates that statistically-processed variables such as averages
+and accumulations have a time period and time unit added after the
+suffix indicating the statistical variable type.  For example, the
+suffix "_avg3h" represents a 3 hour average.  These suffixes are
+required to uniquely characterize otherwise identically-named
+variables that have different periods and/or units within the same
+file. However, when concatenating variables from different files using
+the <a href="addfiles.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/addfiles.shtml"><strong>addfiles</strong></a> function differences in these suffixes
+can prevent individual variables from being concatenated into a single
+composite variable when it is actually desireable. Setting this option
+to False removes the time period and units from the variable name
+leaving only the statistical processing type (e.g.  "_avg" for an
+average or "_acc" for an accumulation).
+
+<p>
+
+<dt><b>ThinnedGridInterpolation</b> 
+
+<dd><b>Default value</b>: <i>"Cubic"</i> (<i>"Linear"</i> if using
+bitmask arrays)
+<p>
+
+<p>This option applies to GRIB1- and GRIB2-formatted files.<p>
+
+This string-valued option has two valid values: <i>"Cubic"</i> or
+<i>"Linear"</i>. This option may be set for any GRIB file, but only
+has an effect when the GRIB file contains data on a thinned
+grid. Note: up to
+version <a href="javascript:if(confirm('http://www.ncl.ucar.edu/prev_releases.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/prev_releases.shtml#4.2.0.a034'" tppabs="http://www.ncl.ucar.edu/prev_releases.shtml#4.2.0.a034">4.2.0.a034</a> of
+NCL, the default was <i>"Linear"</i>. However, the <i>"Cubic"</i> value has
+been shown to produce better results, hence, as of version 4.3.0, it
+is the default setting. The exception is when bitmask arrays are
+encountered. In this case, <i>"Linear"</i> will be the default because
+<i>"Cubic"</i> interpolation cannot be applied in the presence of bitmask
+arrays.
+
+<p>
+The GRIB documentation refers to these grids as "quasi-regular". The
+option controls the interpolation performed in converting variable
+data on the thinned grid to the standard rectangular form that is returned by
+NCL. If this option is modified after adding a GRIB file, the values
+of variables defined on one of these thinned grids will be modified.
+
+
+</dl>
+
+<h3>Binary data file options</h3>
+
+<dl>
+<dt><b>ReadByteOrder</b> 
+
+<dd><b>Default value</b>: <i>"Native"</i>
+<p>
+
+This string-valued option has three valid values: <i>"Native"</i>,
+<i>"BigEndian"</i>, and <i>"LittleEndian"</i>.  It allows
+you to read binary data files written with either big or little endian
+byte ordering independent of the system on which you are running.  It
+affects the contents of variables read using the binary data reading
+functions <a href="cbinread.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/cbinread.shtml"><strong>cbinread</strong></a>, <a href="fbindirread.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbindirread.shtml"><strong>fbindirread</strong></a>,
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml"><strong>fbinrecread</strong></a>, and <a href="fbinread.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinread.shtml"><strong>fbinread</strong></a>, as
+well as the results of the record counting function
+<a href="fbinnumrec.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinnumrec.shtml"><strong>fbinnumrec</strong></a>.  When this option has a
+value of <i>"Native"</i>, these functions behave as they always have:
+they expect the data bytes to be ordered according to the conventions
+of the system on which the code is currently executing. However, if
+the option is set to <i>"BigEndian"</i> or <i>"LittleEndian"</i> NCL
+will expect the input data file to be byte-ordered according to the
+conventions of, respectively, a big-endian or a little-endian system.
+The functions will then either byte-swap the data or not, as
+appropriate for the byte ordering of the system executing the code,
+before assigning the the data to the return variable.
+<p>
+
+<dt><b>WriteByteOrder</b> 
+
+<dd><b>Default value</b>: <i>"Native"</i>
+<p>
+
+This string-valued option has three valid values: <i>"Native"</i>,
+<i>"BigEndian"</i>, and <i>"LittleEndian"</i>.  It allows you to write
+binary data files with whatever byte ordering you prefer independent
+of the system on which you are running. It affects the contents of
+files written using the binary data writing procedures
+<a href="cbinwrite.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/cbinwrite.shtml"><strong>cbinwrite</strong></a>, <a href="fbindirwrite.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbindirwrite.shtml"><strong>fbindirwrite</strong></a>,
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecwrite.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecwrite.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecwrite.shtml"><strong>fbinrecwrite</strong></a>, and <a href="fbinwrite.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinwrite.shtml"><strong>fbinwrite</strong></a>.
+When this option has a value of <i>"Native"</i>, these
+procedures behave as they always have: they write the data bytes
+ordered according to the conventions of the system on which the code
+is executing. However, if the option is set to <i>"BigEndian"</i> or
+<i>"LittleEndian"</i> NCL will write output data files byte-ordered
+according to the conventions of, respectively, a big-endian or a
+little-endian system.  The procedure will either byte-swap the data or
+not, as appropriate for the byte ordering of the system executing the
+code, in order to produce data files with the specified byte ordering.
+<p>
+
+
+<dt><b>KeepOpen</b> 
+
+<dd><b>Default value</b>: False
+<p>
+
+<font color="red"><i>Available in <a href="javascript:if(confirm('http://www.ncl.ucar.edu/prev_releases.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/prev_releases.shtml#6.3.0'" tppabs="http://www.ncl.ucar.edu/prev_releases.shtml#6.3.0">version 6.3.0</a> and later.</i></font>
+<p>
+
+This option improves the efficiency of reading Fortran binary records
+in sequential order, via the <a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml"><strong>fbinrecread</strong></a>
+function. When set to True, the Fortran file is kept open and the file pointer
+is left at the beginning of the record following the last one read, allowing
+the user to read subsequent records faster.  When finished reading the
+file, the user must call <a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml"><strong>fbinrecread</strong></a> once with this
+option set to False in order to close the file.
+<p>
+
+<dt><b>RecordMarkerSize</b> 
+
+<dd><b>Default value</b>: 4
+<p>
+
+<font color="red"><i>Available in <a href="javascript:if(confirm('http://www.ncl.ucar.edu/prev_releases.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/prev_releases.shtml#6.1.1'" tppabs="http://www.ncl.ucar.edu/prev_releases.shtml#6.1.1">version 6.1.1</a> and later.</i></font> 
+<p>
+
+This option can be set to 4 or 8.  It indicates the size in bytes of
+the record marker at the beginning and end of Fortran sequential
+files. The following functions recognize this option:
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml"><strong>fbinrecread</strong></a>, <a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecwrite.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecwrite.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecwrite.shtml"><strong>fbinrecwrite</strong></a>,
+<a href="fbinnumrec.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinnumrec.shtml"><strong>fbinnumrec</strong></a>, <a href="fbinread.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinread.shtml"><strong>fbinread</strong></a>, <a href="fbinwrite.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinwrite.shtml"><strong>fbinwrite</strong></a>.
+<p>
+</dl>
+
+<h3>Options that can apply to multiple formats</h3>
+
+<dl>
+<dt><b>FileStructure</b>
+
+<dd><b>Default value</b>: <i>"Standard"</i>
+<p>
+
+<font color="red"><i>Available in <a href="javascript:if(confirm('http://www.ncl.ucar.edu/prev_releases.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/prev_releases.shtml#6.1.1'" tppabs="http://www.ncl.ucar.edu/prev_releases.shtml#6.1.1">version 6.1.1</a> and later.</i></font>
+<p>
+
+This option has two valid string type values: <i>"Advanced"</i>,
+and <i>"Standard"</i>, where <i>"Advanced"</i> means NCL
+will use a newer file structure with the capability of 
+handling groups and more advanced data structures, like compound data types, variable
+length arrays and enumerated types. You can easily recognize use of the advanced file structure
+based on the appearance of the output of the <a href="print.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/print.shtml"><strong>print</strong></a> procedure: although the same information is
+conveyed it appears in a noticeably different form.
+
+<p>The <i>"Standard"</i> file structure is the traditional structure used for all NCL supported file formats
+prior to NetCDF4. On the other hand, full model NetCDF4 files always use the <i>"Advanced"</i> file structure.
+
+<p>
+In version <b>6.1.1</b>, this option only has an effect for classic model NetCDF files (including NetCDF4 classic files).
+But other than the difference in print output, there should be no difference in the way classic model NetCDF
+is read or written, regardless of the file structure. 
+
+<p>
+
+However, beginning with <a href="javascript:if(confirm('http://www.ncl.ucar.edu/prev_releases.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/prev_releases.shtml#6.2.0'" tppabs="http://www.ncl.ucar.edu/prev_releases.shtml#6.2.0">version 6.2.0</a>,
+this option will work for HDF-EOS5 and shapefiles. Choosing the <i>"Advanced"</i> file structure will allow the user
+to view these file formats using a representation closer to the structure implied by the native format. 
+Conversely, the <i>"Standard"</i> structure will remain available to let you to view the contents as you alway have; 
+in other words backwards compatibility is maintained.
+Eventually other supported formats that can make ues of the advanced features, including HDF4 and HDFEOS2, may
+also be enabled to use the <i>"Advanced"</i> file structure.
+
+<p>
+
+Support for HDF5 is also anticipated beginning with <a href="javascript:if(confirm('http://www.ncl.ucar.edu/prev_releases.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/prev_releases.shtml#6.2.0'" tppabs="http://www.ncl.ucar.edu/prev_releases.shtml#6.2.0">version 6.2.0</a>,
+Like full model NetCDF4, HDF5 will be implemented using the <i>"Advanced"</i> file structure only.
+<p>
+
+
+
+<dt><b>UseNewHLFS</b> 
+
+<dd><b>Default value</b>: <i>False</i>
+<p>
+
+<b>NOTE:</b> This option is available beginning with version <b>6.1.0</b>.
+However, it has been deprecated and may be removed from version <b>6.2.0</b> or later.
+<p>
+
+This option is basically a synonym for the option <b>FileStructure</b> except that it expects a logical value rather than
+a string. Setting <b>UseNewHLFS</b> to <i>True</i> is equivalent to setting <b>FileStructure</b> to <i>"Advanced"</i>. 
+Likewise, setting it <i>False</i> is equivalent to setting <b>FileStructure</b> to <i>"Standard"</i>.
+
+<p>
+</dl>
+
+
+</p><a name="See_also"></a>
+<h2>See Also</h2>
+<p>
+<a href="addfile.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/addfile.shtml"><strong>addfile</strong></a>, <a href="addfiles.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/addfiles.shtml"><strong>addfiles</strong></a>,
+<a href="filedimdef.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/filedimdef.shtml"><strong>filedimdef</strong></a>, <a href="fileattdef.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fileattdef.shtml"><strong>fileattdef</strong></a>,
+<a href="filevardef.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/filevardef.shtml"><strong>filevardef</strong></a>, <a href="filevarattdef.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/filevarattdef.shtml"><strong>filevarattdef</strong></a>,
+<a href="cbinread.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/cbinread.shtml"><strong>cbinread</strong></a>, <a href="fbindirread.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbindirread.shtml"><strong>fbindirread</strong></a>,
+<a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecread.shtml"><strong>fbinrecread</strong></a>, <a href="fbinnumrec.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinnumrec.shtml"><strong>fbinnumrec</strong></a>,
+<a href="fbinread.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinread.shtml"><strong>fbinread</strong></a>, <a href="cbinwrite.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/cbinwrite.shtml"><strong>cbinwrite</strong></a>,
+<a href="fbindirwrite.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbindirwrite.shtml"><strong>fbindirwrite</strong></a>, <a href="javascript:if(confirm('http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecwrite.shtml  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecwrite.shtml'" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinrecwrite.shtml"><strong>fbinrecwrite</strong></a>,
+<a href="fbinwrite.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/fbinwrite.shtml"><strong>fbinwrite</strong></a>.
+</p><a name="Examples"></a>
+<h2>Examples</h2>
+<p>
+<b>Example 1</b>
+<p>
+
+Set all subsequently opened GRIB files to use cubic interpolation
+whenever data on a thinned (quasi-regular) grid is encountered:
+
+<pre>
+   <strong>setfileoption</strong>("grb","ThinnedGridInterpolation","cubic")
+</pre>
+
+
+<b>Example 2</b>
+<p>
+
+Open a NetCDF file in create mode and set <i>DefineMode</i>
+True. Define some dimensions and a variable and some attributes, then
+turn <i>DefineMode</i> off.
+
+<pre>
+   f = <a href="addfile.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/addfile.shtml"><strong>addfile</strong></a>("test.nc","c")
+   <strong>setfileoption</strong>(f,"DefineMode",True)
+   <a href="filedimdef.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/filedimdef.shtml"><strong>filedimdef</strong></a>(f,(/"lat","lon"/), (/100,150/), (/False,False/))
+   <a href="filevardef.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/filevardef.shtml"><strong>filevardef</strong></a>(f,"PSfc","float",(/"lat","lon"/))
+   atts = 1.0
+   atts@_FillValue = -999.0
+   atts@long_name = "Surface Pressure"
+   <a href="filevarattdef.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/filevarattdef.shtml"><strong>filevarattdef</strong></a>(f,"PSfc",atts)
+   <strong>setfileoption</strong>(f,"DefineMode",False) ; (not really necessary)
+   ; assign data only to file variable ; would automatically suspend define mode 
+   f->Psfc = (/ datavar(0,:,:) /)
+</pre>
+
+<b>Example 3</b>
+<p>
+
+Set up the binary data reading functions to expect files written with little-endian
+byte ordering, and the binary data writing procedures to produce big-endian files,
+regardless of the system on which NCL is running. Produce a big-endian file from
+a little-endian file containing float data.
+
+<pre>
+   <strong>setfileoption</strong>("bin","ReadByteOrder","LittleEndian")
+   <strong>setfileoption</strong>("bin","WriteByteOrder","BigEndian")
+
+   v = <a href="cbinread.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/cbinread.shtml"><strong>cbinread</strong></a>("data.littleEndian.bin",-1,"float")
+   <a href="cbinwrite.shtml.htm" tppabs="http://www.ncl.ucar.edu/Document/Functions/Built-in/cbinwrite.shtml"><strong>cbinwrite</strong></a>("data.bigEndian.bin",v)
+</pre>
+
+<b>Example 4</b>
+<p>
+In order to write large variables (>2GB) to a NetCDF file you have to set the 
+NetCDF <b>Format</b> option to <i>LargeFile</i> or to <i>NetCDF4Classic</i>.  
+
+<pre>
+   <strong>setfileoption</strong>("nc","Format","LargeFile")
+</pre>
+or
+<pre>
+   <strong>setfileoption</strong>("nc","Format","NetCDF4Classic")
+</pre>
+<p>
+It might be asked "Why cannot NCL set this option internally when asked to write a big variable." The answer is that the NetCDF library requires that this decision must be made when the file is first created, before there is any knowledge of the size of variables that will be written. It is possible that eventually the largefile format will be the default NetCDF format, but so far the recommendation from Unidata is to maintain backwards compatibility where possible for applications that can only deal with the original small file format of NetCDF.
+
+<p>
+
+<b>Example 5</b>
+<p>
+Users can set the NetCDF <b>Format</b> option to <i>NetCDF4</i> to use the full NetCDF-4 features:
+
+<pre>
+   <strong>setfileoption</strong>("nc","Format","NetCDF4")
+</pre>
+<p>
+By set this option, users can write a NetCDF-4 file, which is different to classic NetCDF file,
+as it uses HDF5 underlying. With this option, there is no size limitation to both files and variables.
+User can also write new data types (string, vlen, compound, enum, opaque),
+and use new features such as compression and chunking.
+
+<p>
+<b>Example 6</b>
+<p>
+Force GRIB files with a single time step, to have an explicit 'time' dimension. 
+<pre>
+   <strong>setfileoption</strong>("grb","SingleElementDimensions","Initial_time") ; initial_time0_hours
+</pre>
+There are numerous options. Please read the description above.
+<p>
+</p>					</div>
+
+					<p>&nbsp;</p>
+
+		<!-- begin footer -->
+		<div id="footer">
+		
+		<p>&#169;2016 <a href="javascript:if(confirm('http://www.ucar.edu/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.ucar.edu/'" tppabs="http://www.ucar.edu/">UCAR</a> | <a href="javascript:if(confirm('http://www2.ucar.edu/privacy-policy  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www2.ucar.edu/privacy-policy'" tppabs="http://www2.ucar.edu/privacy-policy">Privacy Policy</a> | <a href="javascript:if(confirm('http://www2.ucar.edu/terms-of-use  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www2.ucar.edu/terms-of-use'" tppabs="http://www2.ucar.edu/terms-of-use">Terms of Use</a> 
+                   | <a href="mailto:ncladmin@ucar.edu">Contact the Webmaster</a> | <a href="javascript:if(confirm('http://www.nsf.gov/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.nsf.gov/'" tppabs="http://www.nsf.gov/">Sponsored by NSF</a></p>
+
+
+		<!-- end footer -->
+		</div>
+
+           <br class="clearboth"/>
+
+	   <!-- end content -->
+	</div>
+<!-- end wrap -->
+</div>
+</body>
+</html>

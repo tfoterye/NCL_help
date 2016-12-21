@@ -1,0 +1,961 @@
+/*#### UNIVERSAL ORGANIZATION NAV #####*/
+
+@media print {
+       #top_colorbar { display : none }
+       #nav_org_wrap { display : none }
+       #nav_main_wrap { display : none }
+}
+
+/*---  Blue bar at top ---*/
+#top_colorbar {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: #103A78;
+	width: 100%;
+	height: 10px;
+	margin: 0px;
+	padding: 0px;
+	z-index: 10;
+}
+
+/*---  Organization Nav - Should Remain Same on All Sites ---*/
+#nav_org_wrap {
+	position: fixed;
+	top: 10px;
+	left: 0px;
+	background: #454445;
+	width: 100%;
+	height: 19px;
+	margin: 0px;
+	_margin-top: -4px;
+	padding: 0px;
+	z-index: 10;
+}
+
+#nav_org_wrap a {
+	color: #d2aa2f;
+	font-family: verdana, arial, sans-serif;
+	font-size: 9pt;
+	line-height: 14pt;
+}
+
+#nav_org {
+	width: auto;
+	margin: 0px 0px 0px 2px;
+	padding: 0px;
+	float: left;
+	text-align: left;
+}
+
+#nav_org ul li {
+	margin: 0px;
+	padding: 0px;
+}
+
+#nav_org ul li ul li a {
+	width: 100%;
+	color: #000;
+	line-height: 10pt;
+	margin: 0px 0px 0px 2px;
+}
+
+#search {
+	width: auto;
+	height: 19px;
+	margin: 0px 2px 0px 0px;
+	padding: 0px;
+	float: right;
+	border-left: 1px solid #333;
+}
+
+#search ul li {
+	margin: 0px;
+	padding: 0px;
+}
+
+#search ul li ul li a {
+	width: 100%;
+	color: #000;
+	line-height: 10pt;
+	margin: 0px 0px 5px 2px;
+}
+
+/*---  drop lists ---*/
+
+.menubar, .menubar ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.menubar a {
+	display: block;
+	_display: inline;
+	text-decoration: none;
+	padding: 0px 10px 0px 10px;
+	border-right: 1px solid #333;
+	height: auto;
+	_height: 14px;
+}
+
+.menubar a.trigger {
+	padding: 0px 16px 0px 10px;
+	background-image: url("menu_downarrow.png")/*tpa=http://www.ncl.ucar.edu/images_ncar/menu_downarrow.png*/;
+	_background-image: none;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.menubar li {
+	float: left;
+}
+
+.menubar li ul li {
+	font-size: 8pt;
+	width: 95%;
+}
+
+.menubar li {position: relative;}
+
+/* hide from IE mac \*/
+.menubar li {position: static; width: auto;}
+/* end hiding from IE5 mac */
+
+.menubar li ul, .menubar ul li  {
+	width: 325px;
+}
+
+.menubar ul li a  {
+	color: #565656;
+	border-right: 0;
+	padding: 0px 3px 10px 10px;
+}
+
+.menubar li ul {
+	position: absolute;
+	display: none;
+	background-color: #FFFFFF;
+	border-right: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	background-image: url("404-1")/*tpa=http://www.ncar.ucar.edu/images_ncar/menu_gradient.jpg*/;
+	background-repeat: repeat-x;
+}
+
+.menubar li:hover a, #menubar a:focus,
+.menubar a:active {
+	color: #000000;
+	background-color: #000;
+	z-index: 100;
+}
+
+.menubar li:hover ul {
+	display: block;
+	z-index: 100;
+}
+
+.menubar li:hover ul a {
+	color: #000000;
+	background-color: transparent;
+	z-index: 100;
+}
+
+.menubar ul a:hover {
+	background-color: #606060!important;
+	color: #FFFFFF !important;
+	z-index: 100;
+}
+
+/*  use this class (.dropleftorg) and adjust the margin-left so that drop downs on far right buttons don't scroll outside of the viewable area  */
+
+.menubar li:hover ul.dropleftorg {  
+	display: block;
+	margin-left: -237px;
+	text-align: right;
+	z-index: 100;
+}
+
+/*#### MAIN SITE NAV #####*/
+
+#nav_main_wrap {
+	background: #000 url("mainnavback_thin.jpg")/*tpa=http://www.ncl.ucar.edu/Images/mainnavback_thin.jpg*/ repeat-x;
+	position: fixed;
+	top: 28px;
+	left: 0px;
+	width: 100%;
+	height: 40px;
+	z-index: 2;
+	_margin: -5px 0px;
+	_overflow: hidden;
+}
+
+#nav_main {
+	width: 1000px; /* Adjust this width to fit your tabs and keep main nav centered */
+	_width: 940px; /* For IE6 */
+	margin: 0px auto;
+	height: 40px;
+	padding: 0px;
+	z-index: 3;
+}
+
+#menubar_main {
+	width: 996px;
+	z-index: 4;
+}
+
+#menubar_main, #menubar_main ul {
+	padding: 2px 0px;
+	_padding: 10px 0px;
+	margin: 0;
+	list-style: none;
+	font-family: Arial, Helvetica, sans-serif;
+	z-index: 10;
+}
+
+#menubar_main a {
+	display: block;
+	_display: inline;
+	text-decoration: none;
+	padding: 0px 10px 0px 10px;
+	font-size: 10pt;
+	color: #fff;
+	height: 30px;
+}
+
+#menubar_main a.triggeron {
+	padding: 5px 16px 0px 10px;
+	background-image: url("404-1")/*tpa=http://www.ncar.ucar.edu/images_ncar/menu_downarrow_gray.png*/;
+	_background-image: none;
+	background-repeat: no-repeat;
+	background-position: right center;
+	color: #f09c4e;
+	font-weight: bold;
+}
+
+#menubar_main a.trigger {
+	padding: 5px 16px 0px 10px;
+	background-image: url("404-1")/*tpa=http://www.ncar.ucar.edu/images_ncar/menu_downarrow_gray.png*/;
+	_background-image: none;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+#menubar_main li {
+	float: left;
+	width: 9em;
+
+}
+
+#menubar_main li ul li {
+	font-size: 8pt;
+	line-height: 14pt;
+	float: none;
+	text-align: left;
+}
+
+#menubar_main li {position: relative;}
+
+/* hide from IE mac \*/
+#menubar_main li {position: static; width: auto;}
+/* end hiding from IE5 mac */
+
+#menubar_main li ul, #menubar_main ul li  {
+	width: 250px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#menubar_main ul li a  {
+	color: #565656;
+	border-bottom: 1px dotted #91b1cd;
+	height: auto;
+	z-index: 30;
+}
+
+#menubar_main li ul {
+	position: absolute;
+	display: none;
+	background-color: #6f92b0;
+	border-top: 2px solid #91b1cd;
+	border-right: 2px solid #2f55a2;
+	border-bottom: 2px solid #2f55a2;
+	border-left: 2px solid #2f55a2;
+	padding: 5px 10px 5px 10px;
+	background-repeat: repeat-x;
+	z-index: 20;
+}
+
+#menubar_main li:hover a, #menubar_main a:focus,
+#menubar_main a:active {
+	color: #fff;
+	background-color: #2f55a2;
+}
+
+#menubar_main li:hover ul {
+	display: block;
+}
+
+/*  use this class (.dropleft) and adjust the margin-left so that drop downs on far right buttons don't scroll outside of the viewable area  */
+
+#menubar_main li:hover ul.dropleft {  
+	display: block;
+	margin-left: -205px;
+}
+
+#menubar_main li:hover ul a {
+	color: #fff;
+	background-color: transparent;
+}
+
+#menubar_main ul a:hover {
+	background-color: #2f55a2!important;
+	color: #FFFFFF !important;
+
+}
+
+/*#### HOMEPAGE LAYOUT #####*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  background: #585756 url("gray_pat-1s.gif")/*tpa=http://www.ncl.ucar.edu/Images/gray_pat-1s.gif*/ repeat; 
+	font-family: verdana, sans-serif;
+	font-size: 9pt;
+	line-height: 14pt;
+	font-weight: normal;
+	text-align: center; 
+}
+
+ul {
+/*	list-style: none;     */
+	margin: 0px 0px 5px 0px;
+	list-style-position: inside;
+}
+
+ol {
+/*	list-style: none;     */
+	margin: 0px 0px 5px 0px;
+	list-style-position: inside;
+}
+
+li {
+	padding:0px 0px 0px 1px;
+	margin: 0px;
+}
+
+li img {
+	padding:0px;
+	margin: 0px 1px 0px 0px;
+	display: inline;
+}
+
+img {
+	margin: 0px 2px 0px 2px;
+	padding: 0px;
+	width: auto;
+}
+
+h1 {
+	margin: 0px 0px 25px 0px;
+	padding: 5px;
+	font-size: 16pt;
+	line-height: 18pt;
+	font-style: normal;
+	font-family: lucida sans, verdana, arial, sans-serif;
+	color: #02538f;
+	clear: both;
+}
+
+h2 {
+	margin: 15px 5px 10px 0px;
+	font-size: 12pt;
+	line-height: 14pt;
+	font-weight: bold;
+	font-family: verdana, arial, sans-serif;
+	color: #333;
+}
+
+h3 {
+	margin: 16px 5px 15px 2px;
+	font-size: 11pt;
+	line-height: 13pt;
+	font-style: normal;
+	font-weight: bold;
+	font-family: Georgia, Times, serif;
+	color: #648c6d;
+}
+
+h4 {
+	margin: 12px 5px 10px 12px;
+	font-size: 9pt;
+	line-height: 11pt;
+	font-style: normal;
+	font-weight: bold;
+	font-family: verdana, arial, sans-serif;
+	color: #333;
+}
+
+p {
+	margin: 10px 15px 25px 0px;
+	color: #2d2d2d;
+	font-family: verdana, sans-serif;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none; 
+    /*	color: #006BFF;   */
+        color: #0040FF;   	
+	font-family: verdana, sans-serif;
+	font-weight: normal;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #852D85;
+	font-family: verdana, sans-serif;
+	font-weight: normal;
+}
+
+a:hover {
+	background: #cde8fb;
+}
+
+pre {
+        font-size: 10pt;
+	line-height: 12pt;
+        font-family: courier;
+	border-style: solid;
+	border-width: 0px 0px 15px 0px;
+	border-color: transparent;
+}	
+
+td {
+        padding: 5px;
+}   	
+
+/* Screws up placement/border of example images... */
+/*  a img {     */    
+/*  	border: 0;    */
+/*  	vertical-align: middle;    */
+/*  }    */
+
+
+/*   dt / dd coding used in resource pages, *_release pages */
+
+dt {
+  font-size: 11pt;
+	line-height: 13pt;
+	font-weight: bold;
+	font-family: verdana, arial, sans-serif;
+/*	color: #555;   */
+}
+
+dt strong {
+   font-size: 11pt;
+	line-height: 13pt;
+	font-weight: bold;
+	font-family: verdana, arial, sans-serif;
+}
+
+
+dd {
+  font-size: 10pt;
+	line-height: 12pt;
+	margin-left: 25px;
+}
+
+dt code {
+  font-size: 10pt;
+	line-height: 12pt;
+}
+
+/*-----   PAGE CONTENT AREA  -----*/
+
+@media screen {
+#wrap {
+	position: absolute;
+	top: 68px;
+	_top: 75px;
+	left: 0px;
+	bottom: 0px;
+	overflow: auto;
+	width: 100%;
+	/* height: auto; */ 
+}
+}
+
+#content {
+    background-color: #fff;
+    /*	margin-top: 12px; */
+	margin-left: auto;
+	margin-right: auto;
+	width: 978px;
+	height: auto;
+	_height: auto;
+	border-left: 5px solid #88AADD;
+	border-bottom: 3px solid #88AADD;
+	border-right: 5px solid #88AADD;
+	text-align: left; /* Important - to left align content due to centering in the body style */
+}
+
+#content h1 {
+	margin: 50px 10px -2px 10px;
+	clear: both;
+}
+/*-----   NCL PAGE HEADER  -----*/
+
+#subheader {
+	background-color: #fff;
+	float: left;
+	clear: left;
+	width: 100%;
+	height: 40px;
+	display: inline;
+	border-bottom: 1px solid #83aac5;
+}
+
+#subheader img {
+	margin: 0px;
+	float: left;
+	border: none;
+}
+
+#subheader a img {
+	border: none;
+}
+
+#subheader .datetime {
+	float: right;
+	margin: 3px 15px 2px 0px;
+	font: normal normal normal 11pt/12pt arial, verdana, sans-serif;
+	color: #9a9394;
+}
+
+/*-----   NCL HEADER  -----*/
+#nclheader {
+	width: 650px;
+	height: 40px;
+	float: left;
+	margin: 0px;
+	background-color: #224596;
+}
+
+/*-----   GOOGLESEARCH  -----*/
+
+#googlesearch {
+	float: right;
+	width: 322px;
+}
+
+#googlesearch a {
+	font-size: 8pt;
+	float: right;
+	vertical-align: middle;
+	margin: 2px 5px 0px 3px; 
+	color: #444444;
+}
+
+#googlesearch input, submit {
+	font-size: 8pt;
+	float: right;
+	background-color: #e4eef6;
+	vertical-align: middle;
+	margin: 2px 5px 0px 3px;
+}
+
+#googlesearch p.datetime {
+	margin: 2px 10px 0px 0px; 
+	color: #94671a; 
+	text-align: right; 
+	font-size: 11pt;
+}
+
+/*##########  MAIN CONTENT FULL WIDTH  ### Left in for reference #########*/
+
+
+#maincontent_subcolumn_full {
+	background-color: #f5f4e9;
+	width: 770px;
+	min-height: 710px;
+/*	height: auto;*/
+	_height: 400px; /* for IE6 */
+	margin: 0px 5px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	_padding: 0px; /* for IE6 */
+	border: 1px solid #ccc;
+}
+	
+#maincontent_subcolumn_full ul {
+	padding: 0px 0px 0px 25px;
+	list-style-type: square;
+	color: #333;
+}
+	
+#maincontent_subcolumn_full li {
+	margin: 0px 0px 5px 0px;
+}	
+	
+.directory table {	
+	padding: 0px 0px 5px 45px
+}
+
+/*----------##########   FRONT PAGE AREA  ############ USED IN NCL----------*/   
+
+#frontpage_main {
+	float: left;
+	width: 650px;
+	_width: 640px; /* for IE6 */
+	height: auto;
+	margin: 0px 10px 20px 0px;
+	_margin: 0px; /* for IE6 */
+	padding-left: 10px;
+}
+
+#frontpage_main h1 {
+	font-size: 12pt;
+	line-height: 14pt;
+	color: #333;
+	padding: 3px;
+	width: 100%;
+	_width: 95%;
+	margin: 20px 0px 10px 0px;
+}
+
+#frontpage_main p {
+	font-size: 8pt;
+	line-height: 12pt;
+	color: #333;
+	font-variant: normal;
+	margin: 10px 0px 20px 0px;
+}
+
+#frontpage_main ul {
+	font-size: 8pt;
+	line-height: 12pt;
+	color: #333;
+}
+#frontpage_main ul li {
+	list-style:square;
+	margin: 5px 20px 5px 10px;
+}
+
+#frontpage_subcolumn {
+	float: left;
+	clear: left;
+	background-color: #fff;
+	width: 620px;
+	_width: 610px;
+	height: auto;
+	margin: 0px 0px -20px -10px;
+	_margin: 5px 0px -20px 0px;
+	padding: 0px;
+}
+
+#sidebar_setup {
+  background: white;
+	float: left;
+	width: 280px;
+	_width: 270px; /* for IE6 */
+	height: auto;
+	margin: 15px 10px 0px 4px;
+	padding-left: 10px;
+	border-left: 1px solid #ccc;
+	}
+
+#frontpage_sidebar {
+	background: #f2f2f2 url("frontpage_sidebar.jpg")/*tpa=http://www.ncl.ucar.edu/styles/Images/frontpage_sidebar.jpg*/ repeat;
+	border: 2px solid #e9e8d4;
+	float: left;
+	width: 98%;
+	height: auto;
+	_width: 98%;
+	min-height: 100px;
+	margin: 0px 20px 10px 2px;
+	padding-left: 5px;
+	font-size: 9pt;
+	line-height: 12pt;
+}
+
+#frontpage_sidebar h1 {
+	font-size: 10pt;
+	line-height: 12pt;
+	color: #333;
+	padding: 3px;
+	width: auto;
+	_width: 98%;
+	text-align:center;
+	margin: 5px 10px 10px 5px;
+} 
+/*----------##########  GENERAL PAGE AREA  ############*/   
+
+#general_main {
+	width: 750px;
+	_width: 650px; /* for IE6 */
+	height: auto;
+	margin: 0px 0px 20px 10px;
+	_margin: 0px; /* for IE6 */
+	padding-left: 100px;
+	font-size: 10pt;
+	line-height: 12pt;
+}
+
+#general_main p {
+	font-size: 10pt;
+	line-height: 12pt;
+	color: #333;
+	font-variant: normal;
+	margin: 10px 0px 20px 0px;
+}
+
+#general_main img {
+	margin: 0px 10px 0px 2px;
+}
+
+#general_main ul li {
+	font-size: 10pt;
+	line-height: 12pt;
+	color: #333;
+	padding-left:25px;
+	text-indent: -1em;
+}
+
+#general_main ul li blockquote {       /* done specifically for the User_contributed/calendar_decode2,xml page, as <ul>+<li>+<blockquote> */
+	font-size: 10pt;               /* resulting in the 1st line after the blockquote to be indented -1em. This fixes that. */
+	line-height: 12pt;             /* This along with the PRE settings below are needed for those styles that do not need the -1em */
+	color: #333;                   /* setup in the general_main ul li call above. */
+	padding-left:25px;
+	text-indent: 0em;
+}
+
+
+
+#general_main PRE {             /* Important - needed due to general_main ul li setting of text-indent: -1em */
+	text-indent: 0em;       /* Everything will be indented correctly when there's a bullet + pre (see eofunc doc)*/
+}
+
+#general_main ol li {
+	font-size: 10pt;
+	line-height: 12pt;
+	color: #333;
+	padding-left:15px;
+	text-indent: 0em; 
+}
+
+
+#general_main p.spec {
+        padding-left: 2em;
+	text-indent: -1em;
+	margin: 0;
+}
+  
+#general_main div.mainimage {
+        width:570px;
+	float:left;
+	clear:both;
+        border-style:solid;
+	border-width:medium medium 30px;
+	border-color:transparent;
+}
+
+#general_main div.ex {
+        font-size: 10pt;
+	line-height: 12pt;
+        width:700px;
+        padding:5px;
+        border-style:solid;
+        border-width:2px;
+        border-color:#7F0000;
+        margin-bottom:5px;
+        background-color:#FFe7C6;
+        min-height: 120px;
+}
+
+#general_main div.text {
+        font-size: 10pt;
+	line-height: 12pt;
+        clear:both;
+        width:700px;
+        padding:5px;
+        border-style:solid;
+        border-width:2px;
+        border-color:#7F0000;
+        margin-bottom:5px;
+        background-color:#FFe7C6;
+}
+
+#general_main h1 {
+	font-size: 20pt;  
+	line-height: 22pt;  
+	font-style: normal;
+	font-family: lucida sans, verdana, arial, sans-serif;
+	color: #02538f;
+	margin: 5px 0px 0px -5px;
+}
+
+#general_main h2 {
+	margin: 15px 5px 10px 0px;
+	font-size: 13pt;
+	line-height: 15pt;
+	font-family: verdana, arial, sans-serif;
+	color: black;
+}
+
+#general_main div.main {
+}
+
+#general_main blockquote {
+        margin-left:25px;
+	font-size: 10pt;
+	line-height: 12pt;
+}
+
+/**links in bread crumb trail****/
+a:link:crumb{
+}
+a:visited.crumb{
+}
+
+
+
+/*##########   PAGE FOOTER  ############*/
+
+
+#footer {
+	background: #CCCCCC;      /*#f0ac6d; */
+	margin: -2px 0px;
+	padding: 5px;
+	width: 968px;
+	height: 15px;
+	float: left;
+	clear: both;
+	border-top: 1px solid #809280;
+	border-bottom: 1px solid #809280;
+}
+
+#footer p {
+	font-size: 9pt;
+	line-height: 10pt;
+	margin: 3px 3px 3px 15px;
+}
+
+#footer a {
+	color: #4c4b4c;
+}
+
+
+/* ########  General class styles for all pages ######## */
+
+.floatleft {
+	float: left;
+	margin: 5px 12px 6px 0px;
+	padding: 0px;
+	clear: left;
+	}
+
+.floatleft_border {
+	float: left;
+	margin: 5px 12px 6px 0px;
+	border: 1px solid black;
+	clear: left;
+}
+
+.floatright {
+	float: right;
+	margin: 5px 0px 6px 12px;
+	padding: 0px;
+	clear: right;
+}
+
+.floatright_border {
+	float: right;
+	margin: 5px 0px 6px 12px;
+	padding: 0px;
+	border: 1px solid black;
+	clear: right;
+	
+}
+
+.clearboth {
+	clear: both;
+}
+
+.no_float {
+	margin: -10px 0px 12px -15px;
+	padding: 5px;
+	clear: both;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	}
+
+.center {
+	text-align: center;
+	margin-top: 4px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.textorange {
+	color: #c48b27;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.textgreen {
+	color: #4AB07D;
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+.textblue {
+	color: #224596;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.bluefill {
+	font-size: 9pt;
+	line-height: 11pt;
+	color: #333;
+	border-top: 1px solid #AFCFE3;
+	border-bottom: 1px solid #AFCFE3;
+/*	background: #BCD7E8; */
+  background: #88AADD;
+	margin: 3px 10px 10px 5px;
+	padding: 3px 10px 3px 0px;
+}
+
+
+.greenfill {
+	font-size: 9pt;
+	line-height: 11pt;
+	color: #333;
+	border-top: 1px solid #7AB978;
+	border-bottom: 1px solid #7AB978;
+	background: #88BF86;
+	margin: 3px 0px 10px 5px;
+	padding: 3px 0px 3px 0px;
+	width: auto;
+}
+
+.newfill {
+	font-size: 9pt;
+	line-height: 11pt;
+	color: #333;
+/*	border-top: 1px solid #88AADD; */
+/*	border-bottom: 1px solid #88AADD; */
+/*	background: #BCD7E8; */
+        background: #DDBA87;
+	margin: 3px 10px 10px 5px;
+	padding: 3px 10px 3px 0px;
+}
+
+
+
+
+
